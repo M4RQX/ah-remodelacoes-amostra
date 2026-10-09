@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="AH Construções e Remodelações">
+<title>AH</title>
+<rect width="64" height="64" rx="12" fill="#4C4C4C"/>
+<g fill="#BEA548" transform="translate(-38.5 -11.9) scale(0.145)"><polygon points="483,158 318.5,267.7 330,285 483,183"/><polygon points="490,158 654.5,267.7 643,285 490,183"/><polygon points="537,144 550,144 550,205 537,205"/></g>
+<g fill="#BEA548" fill-rule="evenodd" transform="translate(-106.7 -59.8) scale(0.285)"><path d="M394.5,412V363A34,34 0 0 1 428.5,329H470.5A6,6 0 0 1 476.5,335V412H462V391H409V412Z M409,377V363A19,19 0 0 1 428,344H462V377Z"/><path d="M495.5,329H509.5V363H564.5V329H578.5V412H564.5V378H509.5V412H495.5Z"/></g>
+</svg>

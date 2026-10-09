@@ -1,0 +1,4 @@
+# Amostra privada, ainda nao e o site da Hassam Habitat.
+# A pagina leva noindex; o robots fica aberto para a pre-visualizacao do link no WhatsApp funcionar.
+User-agent: *
+Disallow:

@@ -1,0 +1,1223 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>AH Construções e Remodelações, Cartaxo</title>
+<meta name="description" content="Construção e remodelação no Cartaxo, do terreno à última pintura. Mini giratória, carrinha basculante e equipa para a obra toda. Alvará IMPIC n.º 100509-PAR, classe 2.">
+<meta name="theme-color" content="#FFFFFF">
+<meta name="color-scheme" content="only light">
+<meta name="format-detection" content="telephone=no">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_PT">
+<meta property="og:title" content="AH Construções e Remodelações, Cartaxo">
+<meta property="og:description" content="Construção e remodelação no Cartaxo, do terreno à última pintura. Orçamentos pelo WhatsApp.">
+<meta property="og:url" content="https://m4rqx.github.io/ah-remodelacoes-amostra/">
+<meta property="og:image" content="https://m4rqx.github.io/ah-remodelacoes-amostra/assets/img/og-ah.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Logótipo da AH e o título Construção e remodelação no Cartaxo, ao lado de uma parede de terraço iluminada">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/img/favicon-casa.svg" type="image/svg+xml">
+<link rel="icon" href="assets/img/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<link rel="preload" href="assets/fontes/oxanium-latin-700.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fontes/barlow-latin-400.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+@font-face{font-family:"Audiowide";src:url("assets/fontes/audiowide-latin-400.woff2") format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:"Oxanium";src:url("assets/fontes/oxanium-latin-600.woff2") format("woff2");font-weight:600;font-display:swap}
+@font-face{font-family:"Oxanium";src:url("assets/fontes/oxanium-latin-700.woff2") format("woff2");font-weight:700;font-display:swap}
+@font-face{font-family:"Barlow";src:url("assets/fontes/barlow-latin-400.woff2") format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:"Barlow";src:url("assets/fontes/barlow-latin-500.woff2") format("woff2");font-weight:500;font-display:swap}
+@font-face{font-family:"Barlow";src:url("assets/fontes/barlow-latin-600.woff2") format("woff2");font-weight:600;font-display:swap}
+/* Arial acertado à medida das fontes: enquanto carregam, o texto não salta */
+@font-face{font-family:"Barlow-fb";src:local("Arial"),local("ArialMT");font-weight:400;size-adjust:96%;ascent-override:104.17%;descent-override:20.83%;line-gap-override:0%}
+@font-face{font-family:"Barlow-fb";src:local("Arial"),local("ArialMT");font-weight:500;size-adjust:93%;ascent-override:107.53%;descent-override:21.51%;line-gap-override:0%}
+@font-face{font-family:"Barlow-fb";src:local("Arial Bold"),local("Arial-BoldMT");font-weight:600;size-adjust:90.5%;ascent-override:110.5%;descent-override:22.1%;line-gap-override:0%}
+@font-face{font-family:"Oxanium-fb";src:local("Arial Bold"),local("Arial-BoldMT");font-weight:600;size-adjust:97%;ascent-override:81.44%;descent-override:21.65%;line-gap-override:25.77%}
+@font-face{font-family:"Oxanium-fb";src:local("Arial Bold"),local("Arial-BoldMT");font-weight:700;size-adjust:99%;ascent-override:79.8%;descent-override:21.21%;line-gap-override:25.25%}
+@font-face{font-family:"Audiowide-fb";src:local("Arial Bold"),local("Arial-BoldMT");font-weight:400;size-adjust:114%;ascent-override:86.82%;descent-override:25.02%;line-gap-override:0%}
+
+:root{
+  --branco:#FFFFFF;
+  --grafite:#4C4C4C;
+  --grafite-escuro:#3A3939;
+  --dourado:#BEA548;
+  --dourado-escuro:#AB9339;
+  --tinta:#1F1E1E;
+  --nevoa:#F2F2F2;
+  --cinza:#5E5E5E;
+  --grafite-claro:#E2E2E2;
+  --filete:#D4D4D4;
+  --linha:#E6E6E6;
+  --apagado:#6B6B6B;
+
+  --marca:"Audiowide","Audiowide-fb","Oxanium",Arial,sans-serif;
+  --titulo:"Oxanium","Oxanium-fb","Barlow",Arial,sans-serif;
+  --letra:"Barlow","Barlow-fb","Helvetica Neue",Arial,sans-serif;
+
+  --canto:16px;          /* o canto do A: só o de cima à esquerda */
+  --canto-g:36px;        /* o mesmo canto nas fotografias */
+  /* no iPhone deitado, o texto não fica debaixo do entalhe */
+  --gutter:max(clamp(20px,4.5vw,64px), env(safe-area-inset-left), env(safe-area-inset-right));
+  --max:1280px;
+  --cq:1vw;              /* Safari 15 não tem cqw */
+  --esq:max(var(--gutter), calc((100 * var(--cq) - var(--max)) / 2));
+  --curva:calc(57.5 * var(--cq));   /* x = 920,6 em 1600, medido no cartão */
+  --topo-h:64px;
+  color-scheme:only light;
+}
+@supports (width:1cqw){ :root{--cq:1cqw} }
+
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%;scroll-padding-top:12px}
+body{margin:0;background:var(--branco);color:var(--grafite);font:400 17px/1.55 var(--letra);font-kerning:normal;-webkit-font-smoothing:antialiased}
+img,svg{display:block;max-width:100%}
+picture{display:contents}
+a,button{-webkit-tap-highlight-color:transparent}
+img{height:auto}
+a{color:inherit;text-underline-offset:.2em;text-decoration-thickness:1px}
+h1,h2,h3,p,ul,ol,dl,dd,figure{margin:0}
+ul,ol{padding:0;list-style:none}
+h1,h2,h3{font-family:var(--titulo);font-weight:700;line-height:1.1;letter-spacing:-.01em;color:var(--tinta);text-wrap:balance}
+:focus-visible{outline:3px solid var(--tinta);outline-offset:3px}
+.no-grafite :focus-visible{outline-color:var(--dourado)}
+.so-computador{display:none}
+
+.saltar{position:absolute;left:16px;top:-80px;z-index:30;background:var(--grafite);color:var(--branco);padding:12px 16px;border-radius:var(--canto) 0 0 0}
+.saltar:focus{top:12px}
+
+.pagina{container-type:inline-size;overflow-x:clip}
+.wrap{width:min(100% - 2 * var(--gutter), var(--max));margin-inline:auto}
+
+/* ---------- botões: o canto do A ---------- */
+.botao{display:inline-flex;align-items:center;justify-content:center;gap:.45em;min-height:56px;padding:0 24px;border-radius:var(--canto) 0 0 0;font:600 17px/1.15 var(--letra);text-decoration:none;text-align:center;border:0;cursor:pointer}
+.botao--dourado{background:var(--dourado);color:var(--tinta)}
+@media (hover:hover){.botao--dourado:hover{background:var(--dourado-escuro)}}
+.botao--grafite{background:var(--grafite);color:var(--branco)}
+@media (hover:hover){.botao--grafite:hover{background:var(--grafite-escuro)}}
+.botao--contorno{background:transparent;color:var(--branco);box-shadow:inset 0 0 0 2px var(--branco)}
+@media (hover:hover){.botao--contorno:hover{background:rgba(255,255,255,.1)}}
+.botao:active{filter:brightness(.92)}
+.num{font-family:var(--titulo);font-weight:700;letter-spacing:.01em}
+.botao .num{position:relative;top:.1em}
+
+/* ---------- cabeçalho ---------- */
+.topo{position:relative;z-index:3;height:var(--topo-h);display:flex;align-items:center;justify-content:space-between;gap:24px;padding-inline:var(--gutter);background:var(--branco)}
+.topo__esq{display:flex;align-items:center;gap:48px}
+.logo{display:flex;align-items:center;gap:12px;min-height:44px;text-decoration:none;color:var(--grafite)}
+.logo svg{width:auto;height:40px}
+.logo__nome{display:flex;flex-direction:column;font:400 13.5px/1.3 var(--marca);letter-spacing:.01em}
+.menu,.topo__dir{display:none}
+
+/* ---------- hero: o cartão (rodado no telemóvel) ---------- */
+.hero{position:relative;isolation:isolate}
+.hero__papel{display:none}
+.hero__texto{position:relative;z-index:2;padding:12px var(--gutter) 26px}
+.hero h1{font-size:clamp(2rem,1.2rem + 3.6vw,4.125rem);line-height:1.1;max-width:14ch}
+.hero__sub{margin-top:14px;max-width:34em;font-size:1.0625rem;line-height:1.55}
+.acoes{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.hero__texto .acoes{display:none}
+.provas{display:grid;gap:4px;margin-top:18px;font:500 16px/1.35 var(--letra)}
+.provas li{position:relative;padding:6px 0 6px 22px}
+.provas li::before{content:"";position:absolute;left:0;top:calc(6px + .45em);width:10px;height:10px;background:var(--dourado);border-radius:5px 0 0 0}
+.provas a{display:inline-block;padding-block:12px;margin-block:-12px;font-weight:600;color:var(--tinta);text-decoration-color:var(--dourado);text-decoration-thickness:2px}
+.provas .sep{display:none;color:var(--cinza);margin:0 6px}
+.provas .ligacao{display:table;white-space:nowrap}
+
+.hero__painel{position:relative;background:var(--grafite);color:var(--branco)}
+.deitada{display:block;width:100%;height:44px;background:var(--grafite)}
+.painel-tel{padding:4px var(--gutter) 0}
+.painel-tel__rotulo{font:500 15px/1.4 var(--letra);color:var(--grafite-claro)}
+.painel-tel__num{display:block;margin:2px 0 16px;font:700 clamp(2.5rem,1.6rem + 4vw,3rem)/1.1 var(--titulo);letter-spacing:.01em;color:var(--branco);text-decoration:none;white-space:nowrap}
+.hora-nota{margin:14px var(--gutter) 0;max-width:40ch;font-size:15.5px;line-height:1.45;color:var(--grafite-claro)}
+.hora-nota[hidden]{display:none}
+.hero__foto{padding:22px var(--gutter) 28px}
+.hero__foto img{width:100%;aspect-ratio:4/3;object-fit:cover;object-position:50% 85%;border-radius:var(--canto-g) 0 0 0}
+.hero__foto figcaption{margin-top:10px;font-size:14px;line-height:1.4;color:var(--grafite-claro)}
+
+/* ---------- secções ---------- */
+.sec{padding-block:clamp(56px,8vw,112px)}
+.sec h2,.abertura h2{font-size:clamp(1.875rem,1.1rem + 2.2vw,3rem)}
+.intro{margin-top:14px;max-width:34em}
+
+/* ---------- serviços: abre com o logótipo, segue no grafite do cartão ---------- */
+.abertura{display:grid;gap:36px;padding-block:clamp(48px,7vw,96px) clamp(40px,5vw,72px)}
+.marca-grande{display:flex;flex-direction:column;align-items:center;width:min(300px,100%);gap:12px}
+.marca-grande img{width:100%}
+.assinatura{font:400 14px/1.45 var(--marca);letter-spacing:.06em;text-align:center;color:var(--grafite)}
+
+.painel-servicos{background:var(--grafite);color:var(--branco);padding-block:clamp(48px,6vw,88px)}
+.grupo{display:grid;gap:22px}
+.grupo + .grupo{margin-top:52px}
+.grupo h3{font-size:clamp(1.375rem,1.1rem + .8vw,1.75rem);color:var(--branco)}
+.grupo h3 span{display:block;margin-top:4px;font:400 16px/1.4 var(--letra);color:var(--grafite-claro);letter-spacing:0}
+.grupo__foto img{width:100%;aspect-ratio:2/1;object-fit:cover;border-radius:var(--canto-g) 0 0 0}
+.grupo__foto figcaption{margin-top:8px;font-size:14px;line-height:1.4;color:var(--grafite-claro)}
+.oficios{display:grid;gap:2px;margin-top:6px}
+.oficio{display:block;padding:10px 0;text-decoration:none;color:var(--branco)}
+.oficio strong{font:600 1.1875rem/1.2 var(--titulo);text-decoration:underline;text-decoration-color:var(--dourado);text-decoration-thickness:2px;text-underline-offset:.28em}
+@media (hover:hover){.oficio:hover strong{text-decoration-thickness:4px}}
+.oficio:active strong{text-decoration-thickness:4px}
+.oficio span{display:block;margin-top:6px;font-size:16px;line-height:1.45;color:var(--grafite-claro)}
+
+/* ---------- máquinas ---------- */
+.maquinas__grelha{display:grid;gap:22px}
+.maquinas.sec{padding-block:48px}
+.maquinas__foto img{width:100%;aspect-ratio:2/1;object-fit:cover;object-position:50% 55%;border-radius:var(--canto-g) 0 0 0}
+.maquinas__foto figcaption{margin-top:8px;font-size:14px;line-height:1.4;color:var(--cinza)}
+.fichas{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:stretch}
+.ficha{display:flex;flex-direction:column;padding:16px 12px 12px;border-radius:var(--canto-g) 0 0 0;box-shadow:inset 0 0 0 1px var(--filete)}
+.ficha img{height:52px;width:auto;align-self:flex-start;margin-bottom:10px}
+.ficha h3{font-size:1.125rem}
+.ficha ul{margin-top:6px;font-size:14.5px;line-height:1.35}
+.ficha li{padding:3px 0}
+.medidas{margin-top:12px;font-size:14px;color:var(--cinza)}
+
+/* ---------- obras ---------- */
+.obras{background:var(--nevoa)}
+.obras__cab a{font-weight:600;color:var(--tinta);text-decoration-color:var(--dourado);text-decoration-thickness:2px;display:inline-block;padding-block:10px;margin-block:-10px}
+.galeria{display:grid;grid-template-columns:1fr 1fr;gap:26px 12px;margin-top:32px;align-items:start}
+.galeria figure{min-width:0}
+.galeria img{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:24px 0 0 0;background:var(--linha)}
+.galeria .g-largo{grid-column:1 / -1}
+.galeria .g-largo img{aspect-ratio:16/9}
+.galeria figcaption,.par figcaption{margin-top:8px;font-size:15px;line-height:1.4;color:var(--grafite)}
+.fase{display:block;font:600 15px/1.3 var(--letra);color:var(--tinta)}
+.fase::before{content:"";display:inline-block;width:8px;height:8px;margin-right:7px;background:var(--dourado);border-radius:4px 0 0 0;vertical-align:.1em}
+.par{margin-top:44px}
+.par h3{font-size:clamp(1.25rem,1.05rem + .6vw,1.5rem)}
+.par p{margin-top:6px;max-width:40em;font-size:16px}
+.par__fotos{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:18px}
+.par img{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:24px 0 0 0}
+
+/* ---------- pedido: a curva outra vez ---------- */
+.pedido{position:relative;isolation:isolate}
+.papel{display:none}
+.pedido__form{padding:clamp(56px,8vw,112px) var(--gutter) 24px}
+.pedido__form h2{font-size:clamp(1.875rem,1.1rem + 2.2vw,3rem)}
+.campos{display:grid;gap:20px;margin-top:28px}
+.campos__aviso{margin:-8px 0 0;font-size:16px;line-height:1.45;color:var(--tinta)}
+.rotulo{display:block;margin-bottom:10px;font:600 16px/1.3 var(--letra);color:var(--tinta)}
+.rotulo em{font-style:normal;font-weight:400;color:var(--cinza)}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:0 13px;border:0;border-radius:14px 0 0 0;background:var(--nevoa);color:var(--grafite);font:500 15.5px/1.2 var(--letra);cursor:pointer;transition:background-color 120ms ease,color 120ms ease}
+@media (hover:hover){.chip:hover{background:var(--linha)}}
+.chip[aria-pressed="false"]:active{background:var(--linha)}
+.chip[aria-pressed="true"]{background:var(--grafite);color:var(--branco);font-weight:600}
+.chip[aria-pressed="true"]::before{content:"";flex:none;width:.75em;height:.4em;margin:0 .5em .2em 0;border:solid currentColor;border-width:0 0 2.5px 2.5px;transform:rotate(-45deg)}
+.campo input,.campo textarea{width:100%;min-height:54px;padding:14px 16px;border:0;border-radius:var(--canto) 0 0 0;background:var(--nevoa);color:var(--tinta);font:400 17px/1.4 var(--letra);box-shadow:inset 0 -2px 0 var(--grafite)}
+.campo textarea{min-height:100px;resize:vertical}
+.campo input::placeholder,.campo textarea::placeholder{color:var(--apagado);opacity:1}
+.campo input:focus-visible,.campo textarea:focus-visible{outline:3px solid var(--tinta);outline-offset:2px}
+.honesto{margin-top:16px;max-width:34em;font-weight:500;color:var(--branco)}
+
+.pedido__conversa{position:relative;background:var(--grafite);color:var(--branco);padding:0 0 56px}
+.pedido__conversa .dentro{padding:8px var(--gutter) 0}
+.conversa__para{font-size:15px;color:var(--grafite-claro)}
+.conversa__dica{display:block;margin-top:2px}
+.conversa__dica[hidden]{display:none}
+.balao{display:block;width:100%;max-width:34em;min-height:8.5em;margin:10px 0 0;padding:16px 18px;border:0;border-radius:24px 0 0 0;background:var(--branco);color:var(--tinta);font:400 16.5px/1.5 var(--letra);resize:none;overflow:hidden;field-sizing:content;transition:background-color 120ms ease}
+.balao:not([readonly]){box-shadow:inset 0 -3px 0 var(--dourado);cursor:text}
+.balao:focus-visible{outline:3px solid var(--dourado);outline-offset:3px}
+@media (forced-colors:active){.balao{border:2px solid CanvasText}}
+.balao__fim{display:block;max-width:34em;margin-top:10px;font-size:14px;line-height:1.45;color:var(--grafite-claro)}
+.balao__repor{display:flex;align-items:center;min-height:44px;margin-top:2px;padding:0;border:0;background:none;color:var(--branco);font:600 15px/1.3 var(--letra);text-decoration:underline;text-underline-offset:.2em;text-decoration-thickness:1px;cursor:pointer}
+.balao__fim[hidden]{display:none}
+.conversa__acoes{display:grid;gap:10px;margin-top:16px;max-width:34em}
+.conversa__acoes .botao--contorno{min-height:48px}
+.fotos-instrucao{margin-top:16px;max-width:34em;font-size:16px;line-height:1.5;color:var(--branco)}
+.nao-guarda{margin-top:8px;font-size:15px;color:var(--grafite-claro)}
+.passos-titulo{margin-top:40px;font-size:1.375rem;color:var(--branco)}
+.passos{margin-top:8px;max-width:34em}
+.passos li{padding:12px 0;border-top:1px solid rgba(255,255,255,.24);font-size:16px;line-height:1.45;color:var(--grafite-claro)}
+.passos strong{display:block;font:600 17px/1.3 var(--titulo);color:var(--branco)}
+.nota-prazo{margin-top:6px;font-size:14px;color:var(--grafite-claro)}
+
+/* ---------- rodapé: o cartão a fechar ---------- */
+.rodape{position:relative;isolation:isolate;font-size:15px;line-height:1.55}
+.rodape__marca{display:flex;flex-direction:column;align-items:center;padding:56px var(--gutter) 36px}
+.rodape__marca .marca-grande{width:min(280px,100%)}
+.rodape__local{margin-top:20px;font-size:15px;color:var(--grafite)}
+.rodape__legal{position:relative;background:var(--grafite);color:var(--grafite-claro);padding:0 0 calc(108px + env(safe-area-inset-bottom))}
+.rodape__legal .dentro{display:grid;gap:18px;padding:8px var(--gutter) 0}
+.rodape__legal strong{color:var(--branco);font-weight:600}
+.rodape__legal a{color:var(--branco)}
+.rodape__contactos a{display:inline-flex;align-items:center;min-height:44px}
+.rodape__contactos p + p{margin-top:8px}
+.rodape__legal p + p{margin-top:2px}
+.assinado{font-size:14px}
+
+/* ---------- barra fixa do telemóvel ---------- */
+.barra{position:fixed;z-index:20;left:0;right:0;bottom:0;display:grid;grid-template-columns:1fr 1fr;gap:8px;padding:10px var(--gutter) calc(10px + env(safe-area-inset-bottom));background:var(--grafite);box-shadow:0 -1px 0 rgba(0,0,0,.2)}
+.barra .botao{min-height:56px;padding:0 12px}
+.barra{transition:transform 320ms cubic-bezier(.22,1,.36,1),visibility 0s;will-change:transform}
+/* sai a descer (mais depressa) e só depois fica invisível; entra a subir */
+.barra.fora{visibility:hidden;transform:translateY(calc(100% + 8px));transition:transform 220ms cubic-bezier(.4,0,1,1),visibility 0s linear 220ms}
+.barra.quieta{transition:none}
+
+/* ================= a partir de 600 ================= */
+@media (min-width:600px){
+  .fichas{gap:20px}
+}
+
+/* ================= computador: o cartão em paisagem ================= */
+@media (min-width:900px){
+  :root{--topo-h:96px}
+  body{font-size:18px}
+  .so-computador{display:inline}
+  .barra{display:none}
+
+  .topo{position:absolute;top:0;left:0;right:0;background:transparent;padding-inline:var(--esq)}
+  .logo svg{height:50px}
+  .logo__nome{font-size:15px}
+  .topo__dir{display:flex;align-items:center;gap:22px;color:var(--branco)}
+  .topo__dir .botao{min-height:46px;padding:0 20px;font-size:16px}
+  .topo__tel{display:inline-flex;align-items:center;min-height:44px;font:700 19px/1 var(--titulo);letter-spacing:.02em;text-decoration:none}
+  @media (hover:hover){.topo__tel:hover{text-decoration:underline}}
+
+  .hero{background:linear-gradient(90deg,var(--branco) var(--curva),var(--grafite) 0);min-height:100vh;min-height:max(660px,100svh);display:flex;flex-direction:column;padding-top:var(--topo-h)}
+  .hero__papel{display:block;position:absolute;inset:0;width:100%;height:100%;z-index:1;fill:var(--branco);pointer-events:none}
+  .hero__texto{flex:1;display:flex;flex-direction:column;justify-content:center;width:var(--curva);max-width:calc(var(--esq) + 760px);padding:8px clamp(32px,calc(4 * var(--cq)),64px) 72px var(--esq)}
+  .hero__sub{margin-top:26px;font-size:clamp(1.0625rem,.95rem + .35vw,1.1875rem);line-height:1.6;max-width:32em}
+  .hero__texto .acoes{display:flex;flex-wrap:wrap;gap:12px;margin-top:34px}
+  .hero__texto .acoes .botao{min-width:236px}
+  .provas{margin-top:22px;gap:0}
+  .provas .sep{display:inline}
+  .provas .ligacao{display:inline-block}
+
+  .hero__painel{position:absolute;z-index:0;top:var(--topo-h);right:0;bottom:0;left:50%;display:flex;flex-direction:column}
+  .deitada,.painel-tel{display:none}
+  .hero__foto{flex:1;min-height:0;padding:0;display:flex;flex-direction:column}
+  .hero__foto img{flex:1;min-height:0;height:100%;aspect-ratio:auto;border-radius:0;object-position:50% 40%}
+  .hero__foto figcaption{margin:0;padding:16px var(--esq) 0 calc(9.6 * var(--cq) + 40px);font-size:15px}
+  .hora-nota{order:2;margin:6px var(--esq) 0 calc(9.6 * var(--cq) + 40px);font-size:15px}
+  .hero__painel::after{content:"";order:3;height:20px}
+
+  /* serviços */
+  .abertura{grid-template-columns:auto minmax(0,1fr);align-items:center;gap:40px clamp(48px,7vw,112px)}
+  .marca-grande{width:clamp(380px,32vw,430px)}
+  .assinatura{font-size:16px}
+  .grupo{grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(40px,5vw,80px);align-items:center}
+  .grupo--dentro{grid-template-columns:minmax(0,5fr) minmax(0,7fr)}
+  .grupo--dentro .grupo__foto{order:0}
+  .grupo + .grupo{margin-top:clamp(56px,6vw,88px)}
+  .grupo--fora .grupo__foto img{aspect-ratio:4/3}
+  .grupo--dentro .grupo__foto img{aspect-ratio:4/3}
+  .oficios{grid-template-columns:1fr 1fr;gap:10px 40px;margin-top:20px}
+  .oficio span{font-size:16.5px}
+
+  /* máquinas */
+  .maquinas.sec{padding-block:clamp(72px,8vw,112px)}
+  .maquinas__grelha{grid-template-columns:minmax(0,7fr) minmax(0,5fr);grid-template-rows:auto 1fr;gap:0 clamp(40px,5vw,72px);align-items:start}
+  .maquinas__texto .intro{margin-top:22px}
+  .fichas{margin-top:36px;gap:20px}
+  .ficha{padding:28px 26px 22px}
+  .ficha img{height:112px;margin-bottom:16px}
+  .ficha h3{font-size:1.375rem}
+  .ficha ul{font-size:16.5px}
+  .ficha li{padding:6px 0;border-top:1px solid var(--linha)}
+  .maquinas__foto{grid-row:1 / span 2;grid-column:2}
+  .maquinas__foto img{aspect-ratio:4/5;object-position:50% 30%}
+
+  /* obras */
+  .obras__cab{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:24px 64px;align-items:end}
+  .obras__cab .intro{margin-top:0}
+  .galeria{grid-template-columns:repeat(4,minmax(0,1fr));grid-auto-rows:270px;gap:34px 20px;margin-top:44px;align-items:stretch}
+  .galeria figure{display:flex;flex-direction:column;min-height:0}
+  .galeria img,.galeria .g-largo img{flex:1;min-height:0;height:100%;aspect-ratio:auto;border-radius:var(--canto-g) 0 0 0}
+  .galeria .g-largo{grid-column:span 2}
+  .galeria .g-alto{grid-row:span 2}
+  .galeria .g-fim{grid-column:3 / span 2}
+  .galeria figcaption{min-height:4.1em}
+  .par{margin-top:72px;display:grid;grid-template-columns:minmax(0,4fr) minmax(0,8fr);gap:48px;align-items:end}
+  .par__fotos{margin-top:0;gap:20px}
+  .par img{border-radius:var(--canto-g) 0 0 0}
+
+  /* pedido + rodapé: branco à esquerda, grafite à direita, a curva entre os dois */
+  .pedido,.rodape{background:linear-gradient(90deg,var(--branco) var(--curva),var(--grafite) 0);display:grid;grid-template-columns:var(--curva) minmax(0,1fr)}
+  .papel{display:block;position:absolute;inset:0;width:100%;height:100%;z-index:-1;fill:var(--branco);pointer-events:none}
+  .rodape .papel{transform:scaleY(-1);top:-1px;height:calc(100% + 1px)}
+  .pedido__form{padding:clamp(80px,8vw,120px) clamp(32px,calc(4 * var(--cq)),64px) clamp(72px,7vw,104px) var(--esq);max-width:calc(var(--esq) + 720px)}
+  .pedido__conversa{background:transparent;padding:clamp(80px,8vw,120px) var(--esq) clamp(72px,7vw,104px) calc(4.4 * var(--cq) + 44px)}
+  .pedido__conversa .deitada,.rodape .deitada{display:none}
+  .pedido__conversa .dentro{padding:0}
+  .conversa__acoes{grid-template-columns:1fr}
+  .chip{padding:0 15px;font-size:16px}
+  .rodape__marca{align-items:flex-start;padding:32px clamp(32px,calc(4 * var(--cq)),64px) 72px var(--esq)}
+  .rodape__marca .marca-grande{width:clamp(380px,30vw,420px)}
+  .rodape__legal{background:transparent;padding:32px var(--esq) 64px calc(4.4 * var(--cq) + 44px)}
+  .rodape__legal .dentro{padding:24px 0 0;border-top:1px solid rgba(255,255,255,.24)}
+}
+
+@media (min-width:900px) and (max-width:1239px){ .menu{display:none!important} }
+@media (min-width:1240px){
+  .menu{display:flex;gap:30px;font:500 16px/1 var(--letra)}
+  .menu a{text-decoration:none;padding:14px 0}
+  @media (hover:hover){.menu a:hover{text-decoration:underline}}
+}
+@media (min-width:900px) and (max-width:1060px){ .topo__tel{display:none} }
+
+/* ================= telemóvel: correções medidas (lentes de larguras, polegar, visual e iOS) ================= */
+@media (max-width:899px){
+  html{scroll-padding-bottom:calc(88px + env(safe-area-inset-bottom))}
+  /* a costura de 1 px entre o branco e a curva */
+  .deitada{position:relative;top:-1px;background:none}
+  /* primeiro ecrã: no iPhone SE os botões WhatsApp e Ligar ficam inteiros */
+  .hero__texto{padding:8px var(--gutter) 14px}
+  .hero h1{line-height:1.05}
+  .hero__sub{margin-top:10px}
+  .provas{margin-top:12px;gap:2px}
+  .provas li{padding:4px 0 4px 22px}
+  .provas li::before{top:calc(4px + .45em)}
+  .deitada{height:32px}
+  .painel-tel{padding-top:0}
+  .painel-tel__num{margin:0 0 12px}
+  /* serviços: título, foto, lista; e menos ar de ecrã grande */
+  .grupo__texto{display:contents}
+  .grupo h3{order:0}
+  .grupo .grupo__foto{order:1}
+  .oficios{order:2;margin-top:0}
+  .abertura{gap:24px;padding-block:40px 32px}
+  .abertura .marca-grande{width:min(240px,100%)}
+  .painel-servicos{padding-block:40px}
+  .grupo + .grupo{margin-top:40px}
+  .oficio{padding:8px 0}
+  .oficio span{margin-top:4px}
+  .rodape__marca{padding:40px var(--gutter) 28px}
+  .rodape__marca .marca-grande{width:min(240px,100%)}
+  /* nada para ler abaixo de 15 px */
+  .hero__foto figcaption,.grupo__foto figcaption,.maquinas__foto figcaption,.medidas,.nota-prazo,.assinado,.balao__fim{font-size:15px}
+}
+@media (max-width:599px){
+  .hero h1{line-height:1.05}
+  .painel-tel__num{font-size:2.125rem}
+  .par h3{font-size:1.375rem}
+  .abertura .marca-grande{justify-self:center}
+  /* máquinas: um cartão por linha, desenho à direita, lista a 16 px */
+  .fichas{grid-template-columns:1fr;gap:12px}
+  .ficha{display:grid;grid-template-columns:minmax(0,1fr) auto;column-gap:16px;align-items:center;padding:16px 18px 14px}
+  .ficha img{grid-column:2;grid-row:1;height:56px;margin:0}
+  .ficha h3{grid-column:1;grid-row:1;font-size:1.1875rem}
+  .ficha ul{grid-column:1 / -1;margin-top:8px;font-size:16px}
+  .ficha li{padding:2px 0}
+  /* galeria: 2 colunas iguais, quadradas */
+  .galeria{gap:20px 12px;margin-top:24px}
+  .galeria .g-largo{grid-column:auto}
+  .galeria img,.galeria .g-largo img{aspect-ratio:1/1}
+  /* antes e depois: uma por linha, para a comparação se ver */
+  .par__fotos{grid-template-columns:1fr;gap:16px}
+  /* tipos de obra: 2 colunas, alvos de 52 px */
+  .chips{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+  .chip{justify-content:flex-start;min-height:52px;padding:8px 12px;text-align:left}
+  .chip[data-obra="Outra"]{grid-column:1 / -1}
+  /* barra fixa mais escura que o painel, para não se confundir com ele */
+  .barra{background:var(--grafite-escuro);box-shadow:0 -1px 0 rgba(255,255,255,.12);padding:8px var(--gutter) calc(8px + env(safe-area-inset-bottom))}
+  .barra .botao{min-height:48px}
+}
+@media (min-width:600px) and (max-width:1199px){ .ficha h3{min-height:2.2em} }
+@media (max-width:359px){ .sec h2,.abertura h2,.pedido__form h2{font-size:1.75rem} }
+.conversa__acoes .botao{text-wrap:balance;padding-block:8px}
+/* telemóvel deitado e tablet estreito: 600 a 899 px */
+@media (min-width:600px) and (max-width:899px){
+  .hero h1{max-width:none}
+  .hero__foto img{aspect-ratio:16/9}
+  .painel-tel .acoes{max-width:560px}
+  .grupo__foto img,.maquinas__foto img{aspect-ratio:5/2}
+  .galeria{grid-template-columns:repeat(4,minmax(0,1fr));gap:24px 16px}
+  .galeria .g-largo{grid-column:span 2}
+  .galeria .g-largo img{aspect-ratio:3/2}
+  .fichas{max-width:640px}
+  .ficha img{height:64px}
+}
+@media (orientation:landscape) and (max-height:500px){
+  .barra{padding:6px var(--gutter) calc(6px + env(safe-area-inset-bottom))}
+  .barra .botao{min-height:44px}
+}
+/* telemóveis grandes deitados (900 px ou mais) já têm o layout de computador: devolver-lhes a barra */
+@media (min-width:900px) and (max-height:500px) and (hover:none){
+  .barra{display:grid;grid-template-columns:repeat(2,minmax(0,240px));justify-content:end;padding:6px var(--esq) calc(6px + env(safe-area-inset-bottom))}
+  .barra .botao{min-height:44px}
+  .rodape__legal{padding-bottom:calc(72px + env(safe-area-inset-bottom))}
+}
+/* ---------- fotos que abrem em grande ---------- */
+.so-leitor{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0 0 0 0);clip-path:inset(50%);white-space:nowrap;border:0}
+.foto-link{position:relative;display:block;border-radius:24px 0 0 0;cursor:zoom-in;color:inherit}
+.foto-link::after{content:"";position:absolute;right:8px;bottom:8px;width:32px;height:32px;border-radius:12px 0 0 0;pointer-events:none;background:var(--grafite-escuro) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 18 18' fill='none' stroke='%23fff' stroke-width='2' stroke-linecap='square'%3E%3Cpath d='M2 7V2h5M11 2h5v5M16 11v5h-5M7 16H2v-5'/%3E%3C/svg%3E") center/16px no-repeat}
+.foto-link img{transition:filter 160ms ease}
+@media (hover:hover){.foto-link:hover img{filter:brightness(.94)}}
+.foto-link:active img{filter:brightness(.88)}
+.hero__foto .foto-link,.grupo__foto .foto-link,.maquinas__foto .foto-link{border-radius:var(--canto-g) 0 0 0}
+@media (min-width:900px){
+  .foto-link{border-radius:var(--canto-g) 0 0 0}
+  /* o link entra na cadeia flex das fotos que enchem a altura */
+  .hero__foto .foto-link{flex:1;min-height:0;display:flex;flex-direction:column;border-radius:0}
+  .galeria .foto-link{flex:1;min-height:0;display:flex;flex-direction:column}
+}
+
+/* ---------- visor: a foto em grande ---------- */
+html{scrollbar-gutter:stable}
+html.visor-aberto{overflow:hidden;overscroll-behavior:none}
+.visor{position:fixed;inset:0;width:100%;height:100%;max-width:none;max-height:none;margin:0;padding:0;border:0;background:var(--tinta);color:var(--branco);overflow:hidden;opacity:0;transition:opacity 200ms ease}
+.visor.aberto{opacity:1}
+.visor::backdrop{background:transparent}
+.visor :focus-visible{outline:3px solid var(--dourado);outline-offset:3px}
+.visor__caixa{height:100%;display:grid;grid-template-rows:auto minmax(0,1fr) auto auto}
+.visor__topo{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:64px;padding:calc(8px + env(safe-area-inset-top)) var(--gutter) 8px}
+.visor__onde{min-width:0}
+.visor__grupo{display:block;font:500 14px/1.3 var(--letra);color:var(--grafite-claro)}
+.visor__conta{display:block;font:700 18px/1.2 var(--titulo);letter-spacing:.02em;font-variant-numeric:tabular-nums}
+.visor button{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-width:48px;min-height:48px;padding:0 16px;border:0;border-radius:var(--canto) 0 0 0;background:transparent;color:var(--branco);font:600 16px/1.15 var(--letra);cursor:pointer;box-shadow:inset 0 0 0 2px rgba(255,255,255,.55);transition:background-color 120ms ease,opacity 120ms ease}
+.visor button svg{width:18px;height:18px;flex:none}
+@media (hover:hover){.visor button:hover{background:rgba(255,255,255,.1)}}
+.visor button:active{background:rgba(255,255,255,.18)}
+.visor button[aria-disabled="true"]{opacity:.35;cursor:default;background:transparent}
+.visor__foto{position:relative;min-height:0;overflow:hidden;user-select:none;-webkit-user-select:none;-webkit-touch-callout:none;transform:scale(.97);transition:transform 260ms cubic-bezier(.22,1,.36,1)}
+.visor.aberto .visor__foto{transform:none}
+.visor__fita{position:absolute;inset:0;will-change:transform}
+.visor__slide{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;padding:4px var(--gutter);transform:translateX(calc(var(--p,0) * 100%))}
+.visor__slide[hidden]{display:none}
+.visor__img{max-width:none;border-radius:24px 0 0 0;background:var(--grafite-escuro);-webkit-user-drag:none}
+.visor__legenda{width:100%;max-width:60ch;min-height:calc(2.9em + 16px);margin-inline:auto;padding:12px var(--gutter) 4px;font-size:16px;line-height:1.45;color:var(--branco)}
+.visor__legenda .fase{display:inline;margin-right:.35em;color:var(--dourado)}
+.visor__nav{display:grid;grid-template-columns:1fr 1fr;gap:8px;padding:8px var(--gutter) calc(12px + env(safe-area-inset-bottom))}
+.visor__nav[hidden]{display:none}
+.visor__nav button{min-height:56px}
+/* telemóvel deitado: setas dos lados, só com o desenho */
+@media (orientation:landscape) and (max-height:500px){
+  .visor__topo{min-height:48px;padding-block:calc(4px + env(safe-area-inset-top)) 4px}
+  .visor__legenda{min-height:0;padding-top:6px;font-size:15px}
+  .visor__nav{position:fixed;left:0;right:0;top:calc(50% - 28px);display:flex;justify-content:space-between;padding:0 max(12px, env(safe-area-inset-right)) 0 max(12px, env(safe-area-inset-left));pointer-events:none}
+  .visor__nav button{pointer-events:auto;min-width:56px;padding:0 12px}
+  .visor__txt{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+  .visor__slide{padding-inline:calc(56px + 24px + max(12px, env(safe-area-inset-left), env(safe-area-inset-right)))}
+}
+/* computador: setas dos lados, e a foto com margem para elas nunca a taparem */
+@media (min-width:900px){
+  .visor__nav{position:fixed;left:0;right:0;top:calc(50% - 28px);display:flex;justify-content:space-between;padding:0 24px;pointer-events:none}
+  .visor__nav button{pointer-events:auto;min-width:132px}
+  .visor__slide{padding-inline:172px}
+  .visor__legenda{max-width:none;padding-inline:172px;text-align:center}
+}
+
+/* a obra-12 é ao alto: no recorte largo, ficam as paredes e os ferros, não o chão */
+.foto-alto img{object-position:50% 30%}
+
+@media (prefers-reduced-motion:reduce){ *{animation:none!important;transition:none!important;scroll-behavior:auto!important} }
+</style>
+</head>
+<body>
+<a class="saltar" href="#conteudo">Saltar para o conteúdo</a>
+<div class="pagina" id="topo">
+
+<header class="topo">
+  <div class="topo__esq">
+    <a class="logo" href="#topo" aria-label="AH Construções e Remodelações, início">
+      <svg viewBox="0 0 400 364" aria-hidden="true" focusable="false">
+        <path fill="#4C4C4C" d="M108.5,129 L 222.5,53 L 336.5,129 L 336.5,325 L 108.5,325Z"/>
+        <path fill="#BEA548" fill-rule="evenodd" d="M130.5 276 V227 A34 34 0 0 1 164.5 193 H206.5 A6 6 0 0 1 212.5 199 V276 H198 V255 H145 V276 Z M145 241 V227 A19 19 0 0 1 164 208 H198 V241 Z"/>
+        <path fill="#BEA548" d="M231.5 193 H245.5 V227 H300.5 V193 H314.5 V276 H300.5 V242 H245.5 V276 H231.5 Z"/>
+        <polygon fill="#BEA548" points="219,22 54.5,131.7 66,149 219,47"/>
+        <polygon fill="#BEA548" points="226,22 390.5,131.7 379,149 226,47"/>
+        <polygon fill="#BEA548" points="91,141.7 109.5,129.3 109.5,325 91,325"/>
+        <polygon fill="#BEA548" points="354,141.7 335.5,129.3 335.5,325 354,325"/>
+        <polygon fill="#BEA548" points="273,8 286,8 286,69 273,69"/>
+        <path fill="#BEA548" d="M22,340C23.2,339.5 26.7,337.8 29,337C31.3,336.2 33.2,335.8 36,335C38.8,334.2 41,333.5 46,332C51,330.5 59.3,328 66,326C72.7,324 76,322.7 86,320C96,317.3 112.7,312.7 126,310C139.3,307.3 152.7,305.5 166,304C179.3,302.5 196,301.7 206,301C216,300.3 219.3,300 226,300C232.7,300 239.3,300.3 246,301C252.7,301.7 259.3,302.8 266,304C272.7,305.2 279.7,306.5 286,308C292.3,309.5 301,312.2 304,313C301,313.2 292.3,313.5 286,314C279.7,314.5 272.7,315.3 266,316C259.3,316.7 252.7,317.3 246,318C239.3,318.7 232.7,319.2 226,320C219.3,320.8 212.7,322 206,323C199.3,324 192.7,324.8 186,326C179.3,327.2 172.7,328.7 166,330C159.3,331.3 152.7,332.7 146,334C139.3,335.3 132.7,336.7 126,338C119.3,339.3 112.7,340.7 106,342C99.3,343.3 92.7,344.5 86,346C79.3,347.5 71.3,349.7 66,351C60.7,352.3 57.3,353.3 54,354C50.7,354.7 49,355.8 46,355C43,354.2 39,351 36,349C33,347 30.3,344.5 28,343C25.7,341.5 23,340.5 22,340Z"/>
+      </svg>
+      <span class="logo__nome"><span>AH Construções</span><span>e Remodelações</span></span>
+    </a>
+    <nav class="menu" aria-label="Principal">
+      <a href="#servicos">Serviços</a>
+      <a href="#maquinas">Máquinas</a>
+      <a href="#obras">Obras</a>
+      <a href="#pedido">Pedir orçamento</a>
+    </nav>
+  </div>
+  <div class="topo__dir no-grafite">
+    <a class="botao botao--dourado" data-wa href="https://wa.me/351933180922?text=Ol%C3%A1%2C%20vi%20o%20site%20da%20AH%20e%20queria%20pedir%20um%20or%C3%A7amento.">WhatsApp</a>
+    <a class="topo__tel" href="tel:+351933180922" aria-label="Ligar para o 933 180 922">933 180 922</a>
+  </div>
+</header>
+
+<main id="conteudo">
+<div class="hero">
+  <svg class="hero__papel" viewBox="0 0 1600 1000" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path d="M0,0 L920.6,0 C978.2,159.4 985,331.1 983.3,500 C983.6,667.4 949.2,832.1 946.5,1000 L0,1000 Z"/></svg>
+
+  <div class="hero__texto">
+    <h1>Construção e remodelação no Cartaxo.</h1>
+    <p class="hero__sub">Do terreno à última pintura.<span class="so-computador"> Começamos com a mini giratória, levantamos paredes, isolamos, tratamos da luz e da água e deixamos tudo pintado.</span> Um só contacto para a obra toda.</p>
+    <div class="acoes" data-esconde-barra>
+      <a class="botao botao--dourado" data-wa href="https://wa.me/351933180922?text=Ol%C3%A1%2C%20vi%20o%20site%20da%20AH%20e%20queria%20pedir%20um%20or%C3%A7amento.">Falar no WhatsApp</a>
+      <a class="botao botao--grafite" href="tel:+351933180922">Ligar <span class="num">933 180 922</span></a>
+    </div>
+    <ul class="provas">
+      <li><span>Alvará IMPIC n.º 100509-PAR</span><span class="sep" aria-hidden="true">·</span> <a class="ligacao" href="https://www.impic.pt/impic/pt-pt/consultar/empresas-titulares-de-alvara-de-empreiteiro-de-obras-particulares" target="_blank" rel="noopener">Confirmar no IMPIC</a></li>
+      <li><span>4,8 em 5 no Zaask, em 11 avaliações</span><span class="sep" aria-hidden="true">·</span> <a class="ligacao" href="https://www.zaask.pt/user/abdelhassam" target="_blank" rel="noopener">Ver as avaliações</a></li>
+    </ul>
+  </div>
+
+  <div class="hero__painel no-grafite">
+    <svg class="deitada" viewBox="0 0 1000 66" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path fill="#FFFFFF" d="M0,0 H1000 V25.9 C832.1,28.6 667.4,63 500,62.7 C331.1,64.4 159.4,57.6 0,0 Z"/></svg>
+    <div class="painel-tel">
+      <p class="painel-tel__rotulo">Chamadas e WhatsApp</p>
+      <a class="painel-tel__num" href="tel:+351933180922" aria-label="Ligar para o 933 180 922">933 180 922</a>
+      <div class="acoes" data-esconde-barra>
+        <a class="botao botao--dourado" data-wa href="https://wa.me/351933180922?text=Ol%C3%A1%2C%20vi%20o%20site%20da%20AH%20e%20queria%20pedir%20um%20or%C3%A7amento.">WhatsApp</a>
+        <a class="botao botao--contorno" href="tel:+351933180922">Ligar</a>
+      </div>
+    </div>
+    <p class="hora-nota" data-hora-nota hidden></p>
+    <figure class="hero__foto">
+      <a class="foto-link" href="assets/fotos/obra-05-1200.jpg" data-avif="assets/fotos/obra-05-1200.avif" data-w="800" data-h="1422" data-visor="topo"><picture><source type="image/avif" srcset="assets/fotos/topo-640.avif 640w, assets/fotos/topo-800.avif 800w" sizes="(min-width:900px) 50vw, 100vw"><img src="assets/fotos/topo-800.jpg" srcset="assets/fotos/topo-640.jpg 640w, assets/fotos/topo-800.jpg 800w" sizes="(min-width:900px) 50vw, 100vw" width="800" height="992" fetchpriority="high" decoding="async" alt="Duche com azulejo verde ao alto e parede com papel de folhas"></picture><span class="so-leitor">, abrir em grande</span></a>
+      <figcaption>Papel de parede e azulejo numa casa de banho.</figcaption>
+    </figure>
+  </div>
+</div>
+
+<section class="servicos" id="servicos" aria-labelledby="t-servicos" data-visor-titulo="Serviços">
+  <div class="wrap abertura">
+    <div class="marca-grande">
+      <img src="assets/img/logo-completo-948.png" width="948" height="408" loading="lazy" decoding="async" alt="Logótipo da AH: casa com as letras AH entre uma mini giratória e um camião basculante, sobre uma onda dourada">
+      <p class="assinatura">CONSTRUÇÕES E<br>REMODELAÇÕES TOTAIS</p>
+    </div>
+    <div>
+      <h2 id="t-servicos">Pela ordem em que uma casa se faz.</h2>
+      <p class="intro">Pode pedir a obra inteira ou só a parte que falta. Carregue na obra que procura e o pedido abre já com ela escolhida.</p>
+    </div>
+  </div>
+
+  <div class="painel-servicos no-grafite">
+    <div class="wrap grupo grupo--fora">
+      <div class="grupo__texto">
+        <h3>Por fora <span>Do terreno ao telhado.</span></h3>
+        <ul class="oficios">
+          <li><a class="oficio" href="#pedido" data-obra="Terreno e máquina"><strong>Terreno e máquina</strong><span>Abrir valas e fundações, demolir, nivelar e limpar terreno.</span></a></li>
+          <li><a class="oficio" href="#pedido" data-obra="Construção ou ampliação"><strong>Casa nova, anexo ou ampliação</strong><span>Paredes em alvenaria ou em estrutura de aço leve.</span></a></li>
+          <li><a class="oficio" href="#pedido" data-obra="Humidades e infiltrações"><strong>Humidades e infiltrações</strong><span>Telhados novos ou recuperados, terraços e paredes impermeabilizados.</span></a></li>
+          <li><a class="oficio" href="#pedido" data-obra="Isolamento e capoto"><strong>Casa fria no inverno</strong><span>Capoto nas fachadas, isolamento por dentro, tetos e divisórias em pladur.</span></a></li>
+        </ul>
+      </div>
+      <figure class="grupo__foto foto-alto">
+        <a class="foto-link" href="assets/fotos/obra-12-1200.jpg" data-avif="assets/fotos/obra-12-1200.avif" data-w="800" data-h="1067" data-visor="servicos"><picture><source media="(max-width:899px)" type="image/avif" srcset="assets/fotos/obra-12-tel.avif" width="800" height="400"><source media="(max-width:899px)" srcset="assets/fotos/obra-12-tel.jpg" width="800" height="400"><source type="image/avif" srcset="assets/fotos/obra-12-640.avif 640w, assets/fotos/obra-12-1200.avif 800w" sizes="(min-width:900px) 36vw, 100vw"><img src="assets/fotos/obra-12-1200.jpg" srcset="assets/fotos/obra-12-640.jpg 640w, assets/fotos/obra-12-1200.jpg 800w" sizes="(min-width:900px) 36vw, 100vw" width="800" height="1067" loading="lazy" decoding="async" alt="Paredes de tijolo vermelho a serem levantadas, com os ferros dos pilares à vista, num terreno aberto"></picture><span class="so-leitor">, abrir em grande</span></a>
+        <figcaption>Em obra: paredes de tijolo numa construção nova.</figcaption>
+      </figure>
+    </div>
+
+    <div class="wrap grupo grupo--dentro">
+      <figure class="grupo__foto">
+        <a class="foto-link" href="assets/fotos/obra-06-1200.jpg" data-avif="assets/fotos/obra-06-1200.avif" data-w="800" data-h="450" data-visor="servicos"><picture><source type="image/avif" srcset="assets/fotos/obra-06-640.avif 640w, assets/fotos/obra-06-1200.avif 800w" sizes="(min-width:900px) 36vw, 100vw"><img src="assets/fotos/obra-06-1200.jpg" srcset="assets/fotos/obra-06-640.jpg 640w, assets/fotos/obra-06-1200.jpg 800w" sizes="(min-width:900px) 36vw, 100vw" width="800" height="450" loading="lazy" decoding="async" alt="Sala ampla com pavimento flutuante claro, paredes brancas e porta de vidro ao fundo"></picture><span class="so-leitor">, abrir em grande</span></a>
+        <figcaption>Em obra: pavimento flutuante já assente na sala.</figcaption>
+      </figure>
+      <div class="grupo__texto">
+        <h3>Por dentro <span>Da luz à última pintura.</span></h3>
+        <ul class="oficios">
+          <li><a class="oficio" href="#pedido" data-obra="Eletricidade e domótica"><strong>Eletricidade e domótica</strong><span>Instalação nova ou remodelada: quadro, tomadas e iluminação.</span></a></li>
+          <li><a class="oficio" href="#pedido" data-obra="Canalização"><strong>Canalização</strong><span>Água e esgotos: canos novos e reparação de fugas.</span></a></li>
+          <li><a class="oficio" href="#pedido" data-obra="Casa de banho"><strong>Casa de banho nova</strong><span>Ladrilho, louças, base de duche e canalização, num só orçamento.</span></a></li>
+          <li><a class="oficio" href="#pedido" data-obra="Cozinha"><strong>Cozinha de raiz</strong><span>Paredes, chão, água e luz prontos para a cozinha nova.</span></a></li>
+          <li><a class="oficio" href="#pedido" data-obra="Pavimentos e ladrilho"><strong>Chão e ladrilho</strong><span>Mosaico, pavimento flutuante e pedra.</span></a></li>
+          <li><a class="oficio" href="#pedido" data-obra="Pinturas"><strong>Pinturas</strong><span>Interiores e fachadas, com as paredes preparadas antes da tinta.</span></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="maquinas sec" id="maquinas" aria-labelledby="t-maquinas" data-visor-titulo="Máquinas">
+  <div class="wrap maquinas__grelha">
+    <div class="maquinas__texto">
+      <h2 id="t-maquinas">A parte pesada também é connosco.</h2>
+      <p class="intro">Muitas obras começam antes das paredes: é preciso abrir valas, escavar e tirar terra. Fazemos essa parte com a mini giratória e a carrinha basculante, as duas máquinas do logótipo.</p>
+    </div>
+    <figure class="maquinas__foto">
+      <a class="foto-link" href="assets/fotos/obra-11-1200.jpg" data-avif="assets/fotos/obra-11-1200.avif" data-w="800" data-h="1066" data-visor="maquinas"><picture><source media="(max-width:899px)" type="image/avif" srcset="assets/fotos/obra-11-tel.avif" width="800" height="400"><source media="(max-width:899px)" srcset="assets/fotos/obra-11-tel.jpg" width="800" height="400"><source type="image/avif" srcset="assets/fotos/obra-11-640.avif 640w, assets/fotos/obra-11-1200.avif 800w" sizes="(min-width:900px) 38vw, 100vw"><img src="assets/fotos/obra-11-1200.jpg" srcset="assets/fotos/obra-11-640.jpg 640w, assets/fotos/obra-11-1200.jpg 800w" sizes="(min-width:900px) 38vw, 100vw" width="800" height="1066" loading="lazy" decoding="async" alt="Mini giratória amarela e carrinha basculante junto a um monte de brita, num terreno com árvores"></picture><span class="so-leitor">, abrir em grande</span></a>
+      <figcaption>Mini giratória e carrinha basculante numa obra, a espalhar brita.</figcaption>
+    </figure>
+    <div class="maquinas__fichas">
+      <div class="fichas">
+        <article class="ficha">
+          <img src="assets/img/giratoria.svg" width="246" height="224" loading="lazy" decoding="async" alt="">
+          <h3>Mini giratória</h3>
+          <ul>
+            <li>Abrir valas e fundações</li>
+            <li>Demolir</li>
+            <li>Escavar para piscina ou fossa</li>
+            <li>Nivelar e limpar terreno</li>
+          </ul>
+        </article>
+        <article class="ficha">
+          <img src="assets/img/basculante.svg" width="280" height="174" loading="lazy" decoding="async" alt="">
+          <h3>Carrinha basculante</h3>
+          <ul>
+            <li>Levar o entulho da obra</li>
+            <li>Trazer brita e areia</li>
+            <li>Trazer terra vegetal</li>
+          </ul>
+        </article>
+      </div>
+      <p class="medidas">Medidas e cargas: a confirmar.</p>
+    </div>
+  </div>
+</section>
+
+<section class="obras sec" id="obras" aria-labelledby="t-obras" data-visor-titulo="Obras da equipa">
+  <div class="wrap">
+    <div class="obras__cab">
+      <h2 id="t-obras">Obras da equipa.</h2>
+      <p class="intro">Fotografias das nossas obras, umas já acabadas e outras a meio. Carregue numa foto para a ver em grande. <a href="https://www.zaask.pt/user/abdelhassam" target="_blank" rel="noopener">Ver as avaliações no Zaask</a></p>
+    </div>
+    <div class="galeria">
+      <figure class="g-largo"><a class="foto-link" href="assets/fotos/obra-03-1200.jpg" data-avif="assets/fotos/obra-03-1200.avif" data-w="800" data-h="450" data-visor="obras"><picture><source type="image/avif" srcset="assets/fotos/obra-03-640.avif 640w, assets/fotos/obra-03-1200.avif 800w" sizes="(min-width:900px) 45vw, 50vw"><img src="assets/fotos/obra-03-1200.jpg" srcset="assets/fotos/obra-03-640.jpg 640w, assets/fotos/obra-03-1200.jpg 800w" sizes="(min-width:900px) 45vw, 50vw" width="800" height="450" loading="lazy" decoding="async" alt="Cozinha com ilha central, móveis cinzentos, focos embutidos no teto e luz por baixo dos armários"></picture><span class="so-leitor">, abrir em grande</span></a><figcaption><span class="fase">Acabada</span>Cozinha com ilha, focos no teto e luz por baixo dos armários.</figcaption></figure>
+      <figure class="g-alto"><a class="foto-link" href="assets/fotos/obra-04-640.jpg" data-avif="assets/fotos/obra-04-640.avif" data-w="450" data-h="800" data-visor="obras"><picture><source type="image/avif" srcset="assets/fotos/obra-04-640.avif"><img src="assets/fotos/obra-04-640.jpg" width="450" height="800" loading="lazy" decoding="async" alt="Casa de banho pequena com lavatório suspenso e pavimento em ladrilho geométrico preto, branco e cinza"></picture><span class="so-leitor">, abrir em grande</span></a><figcaption><span class="fase">Acabada</span>Casa de banho com lavatório suspenso e ladrilho geométrico.</figcaption></figure>
+      <figure class="g-alto foto-alto"><a class="foto-link" href="assets/fotos/obra-13-1200.jpg" data-avif="assets/fotos/obra-13-1200.avif" data-w="800" data-h="1423" data-visor="obras"><picture><source type="image/avif" srcset="assets/fotos/obra-13-640.avif 640w, assets/fotos/obra-13-1200.avif 800w" sizes="(min-width:900px) 22vw, 50vw"><img src="assets/fotos/obra-13-1200.jpg" srcset="assets/fotos/obra-13-640.jpg 640w, assets/fotos/obra-13-1200.jpg 800w" sizes="(min-width:900px) 22vw, 50vw" width="800" height="1423" loading="lazy" decoding="async" alt="Mini giratória entre paredes de tijolo e pedra em demolição, com um monte de entulho à frente"></picture><span class="so-leitor">, abrir em grande</span></a><figcaption><span class="fase">Em obra</span>Mini giratória entre o entulho de uma demolição.</figcaption></figure>
+      <figure class="g-largo"><a class="foto-link" href="assets/fotos/obra-01-1200.jpg" data-avif="assets/fotos/obra-01-1200.avif" data-w="800" data-h="450" data-visor="obras"><picture><source type="image/avif" srcset="assets/fotos/obra-01-640.avif 640w, assets/fotos/obra-01-1200.avif 800w" sizes="(min-width:900px) 45vw, 50vw"><img src="assets/fotos/obra-01-1200.jpg" srcset="assets/fotos/obra-01-640.jpg 640w, assets/fotos/obra-01-1200.jpg 800w" sizes="(min-width:900px) 45vw, 50vw" width="800" height="450" loading="lazy" decoding="async" alt="Estrutura em aço leve com painéis de OSB, em forma de empena, montada sobre um terraço ao fim da tarde"></picture><span class="so-leitor">, abrir em grande</span></a><figcaption><span class="fase">Em obra</span>Estrutura em aço leve com painéis de OSB, sobre um terraço.</figcaption></figure>
+      <figure class="g-alto"><a class="foto-link" href="assets/fotos/obra-09-1200.jpg" data-avif="assets/fotos/obra-09-1200.avif" data-w="800" data-h="1066" data-visor="obras"><picture><source type="image/avif" srcset="assets/fotos/obra-09-640.avif 640w, assets/fotos/obra-09-1200.avif 800w" sizes="(min-width:900px) 22vw, 50vw"><img src="assets/fotos/obra-09-1200.jpg" srcset="assets/fotos/obra-09-640.jpg 640w, assets/fotos/obra-09-1200.jpg 800w" sizes="(min-width:900px) 22vw, 50vw" width="800" height="1066" loading="lazy" decoding="async" alt="Pequena casa de paredes brancas com a fachada acabada em capoto, sob céu azul"></picture><span class="so-leitor">, abrir em grande</span></a><figcaption><span class="fase">Acabada</span>Casa com a fachada em capoto.</figcaption></figure>
+      <figure class="g-alto"><a class="foto-link" href="assets/fotos/obra-07-1200.jpg" data-avif="assets/fotos/obra-07-1200.avif" data-w="800" data-h="1067" data-visor="obras"><picture><source type="image/avif" srcset="assets/fotos/obra-07-640.avif 640w, assets/fotos/obra-07-1200.avif 800w" sizes="(min-width:900px) 22vw, 50vw"><img src="assets/fotos/obra-07-1200.jpg" srcset="assets/fotos/obra-07-640.jpg 640w, assets/fotos/obra-07-1200.jpg 800w" sizes="(min-width:900px) 22vw, 50vw" width="800" height="1067" loading="lazy" decoding="async" alt="Parede exterior a ser revestida com pedra de xisto, com andaime e escada encostados"></picture><span class="so-leitor">, abrir em grande</span></a><figcaption><span class="fase">Em obra</span>Parede exterior a ser revestida a xisto.</figcaption></figure>
+      <figure class="g-largo g-fim"><a class="foto-link" href="assets/fotos/obra-10-1200.jpg" data-avif="assets/fotos/obra-10-1200.avif" data-w="800" data-h="450" data-visor="obras"><picture><source type="image/avif" srcset="assets/fotos/obra-10-640.avif 640w, assets/fotos/obra-10-1200.avif 800w" sizes="(min-width:900px) 45vw, 50vw"><img src="assets/fotos/obra-10-1200.jpg" srcset="assets/fotos/obra-10-640.jpg 640w, assets/fotos/obra-10-1200.jpg 800w" sizes="(min-width:900px) 45vw, 50vw" width="800" height="450" loading="lazy" decoding="async" alt="Interior de uma estrutura em aço leve, com painéis de OSB, isolamento entre os perfis e uma claraboia no topo"></picture><span class="so-leitor">, abrir em grande</span></a><figcaption><span class="fase">Em obra</span>Por dentro da estrutura: isolamento entre os perfis e claraboia.</figcaption></figure>
+      <figure class="g-largo g-fim"><a class="foto-link" href="assets/fotos/obra-08-1200.jpg" data-avif="assets/fotos/obra-08-1200.avif" data-w="800" data-h="450" data-visor="obras"><picture><source type="image/avif" srcset="assets/fotos/obra-08-640.avif 640w, assets/fotos/obra-08-1200.avif 800w" sizes="(min-width:900px) 45vw, 50vw"><img src="assets/fotos/obra-08-1200.jpg" srcset="assets/fotos/obra-08-640.jpg 640w, assets/fotos/obra-08-1200.jpg 800w" sizes="(min-width:900px) 45vw, 50vw" width="800" height="450" loading="lazy" decoding="async" alt="Entrada de uma casa em obra, com arco branco, porta e janela com contorno pintado de castanho avermelhado e material de obra à frente"></picture><span class="so-leitor">, abrir em grande</span></a><figcaption><span class="fase">Em obra</span>Entrada com arco, porta e janela com contornos pintados.</figcaption></figure>
+    </div>
+
+    <div class="par">
+      <div>
+        <h3>A mesma divisão, em duas fases.</h3>
+        <p>Primeiro saiu o telhado velho. Depois levou estrutura nova em aço leve.</p>
+      </div>
+      <div class="par__fotos">
+        <figure><a class="foto-link" href="assets/fotos/antes-01-1200.jpg" data-avif="assets/fotos/antes-01-1200.avif" data-w="800" data-h="450" data-visor="obras"><picture><source type="image/avif" srcset="assets/fotos/antes-01-640.avif 640w, assets/fotos/antes-01-1200.avif 800w" sizes="(min-width:900px) 30vw, (min-width:600px) 50vw, 100vw"><img src="assets/fotos/antes-01-1200.jpg" srcset="assets/fotos/antes-01-640.jpg 640w, assets/fotos/antes-01-1200.jpg 800w" sizes="(min-width:900px) 30vw, (min-width:600px) 50vw, 100vw" width="800" height="450" loading="lazy" decoding="async" alt="Divisão sem telhado, com as vigas e ripas de madeira antigas à vista e o céu aberto por cima"></picture><span class="so-leitor">, abrir em grande</span></a><figcaption><span class="fase">Antes</span>Telhado velho retirado.</figcaption></figure>
+        <figure><a class="foto-link" href="assets/fotos/depois-01-1200.jpg" data-avif="assets/fotos/depois-01-1200.avif" data-w="800" data-h="450" data-visor="obras"><picture><source type="image/avif" srcset="assets/fotos/depois-01-640.avif 640w, assets/fotos/depois-01-1200.avif 800w" sizes="(min-width:900px) 30vw, (min-width:600px) 50vw, 100vw"><img src="assets/fotos/depois-01-1200.jpg" srcset="assets/fotos/depois-01-640.jpg 640w, assets/fotos/depois-01-1200.jpg 800w" sizes="(min-width:900px) 30vw, (min-width:600px) 50vw, 100vw" width="800" height="450" loading="lazy" decoding="async" alt="A mesma divisão, já com a nova estrutura de aço leve e painéis de OSB no teto, ainda em obra"></picture><span class="so-leitor">, abrir em grande</span></a><figcaption><span class="fase">Em obra</span>Estrutura nova em aço leve.</figcaption></figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="pedido" id="pedido" aria-labelledby="t-pedido" data-esconde-barra>
+  <svg class="papel" viewBox="0 0 1600 1000" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path d="M0,0 L920.6,0 C978.2,159.4 985,331.1 983.3,500 C983.6,667.4 949.2,832.1 946.5,1000 L0,1000 Z"/></svg>
+  <div class="pedido__form">
+    <h2 id="t-pedido">Peça o orçamento pelo WhatsApp.</h2>
+    <p class="intro">Escolha a obra, diga onde é e, se quiser, escreva duas linhas. A mensagem fica pronta e só sai quando a enviar.</p>
+    <form id="form-pedido" class="campos" action="#pedido" novalidate>
+      <div role="group" aria-labelledby="l-obra" id="grupo-obra">
+        <span class="rotulo" id="l-obra">Que obra é?</span>
+        <div class="chips">
+          <button type="button" class="chip" aria-pressed="false" data-obra="Terreno e máquina">Terreno e máquina</button>
+          <button type="button" class="chip" aria-pressed="false" data-obra="Construção ou ampliação">Construção ou ampliação</button>
+          <button type="button" class="chip" aria-pressed="false" data-obra="Humidades e infiltrações">Humidades e infiltrações</button>
+          <button type="button" class="chip" aria-pressed="false" data-obra="Isolamento e capoto">Isolamento e capoto</button>
+          <button type="button" class="chip" aria-pressed="false" data-obra="Eletricidade e domótica">Eletricidade e domótica</button>
+          <button type="button" class="chip" aria-pressed="false" data-obra="Canalização">Canalização</button>
+          <button type="button" class="chip" aria-pressed="false" data-obra="Casa de banho">Casa de banho</button>
+          <button type="button" class="chip" aria-pressed="false" data-obra="Cozinha">Cozinha</button>
+          <button type="button" class="chip" aria-pressed="false" data-obra="Pavimentos e ladrilho">Pavimentos e ladrilho</button>
+          <button type="button" class="chip" aria-pressed="false" data-obra="Pinturas">Pinturas</button>
+          <button type="button" class="chip" aria-pressed="false" data-obra="Outra">Outra</button>
+        </div>
+      </div>
+      <p class="campos__aviso" id="campos-editada" hidden>Mudou a mensagem à mão, por isso estas escolhas já não entram nela. Por baixo da mensagem há um botão para voltar à automática.</p>
+      <div class="campo">
+        <label class="rotulo" for="c-local">Localidade</label>
+        <input id="c-local" name="localidade" autocomplete="address-level2" autocapitalize="words" autocorrect="off" spellcheck="false" enterkeyhint="next" placeholder="Ex.: Cartaxo" maxlength="60">
+      </div>
+      <div class="campo">
+        <label class="rotulo" for="c-nome">Nome</label>
+        <input id="c-nome" name="nome" autocomplete="name" autocapitalize="words" autocorrect="off" spellcheck="false" enterkeyhint="next" maxlength="60">
+      </div>
+      <div class="campo">
+        <label class="rotulo" for="c-texto">O que se passa? <em>(opcional)</em></label>
+        <textarea id="c-texto" name="descricao" rows="3" maxlength="400" autocapitalize="sentences" enterkeyhint="done" placeholder="Ex.: trocar a banheira por base de duche"></textarea>
+      </div>
+    </form>
+  </div>
+
+  <div class="pedido__conversa no-grafite">
+    <svg class="deitada" viewBox="0 0 1000 66" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path fill="#FFFFFF" d="M0,0 H1000 V25.9 C832.1,28.6 667.4,63 500,62.7 C331.1,64.4 159.4,57.6 0,0 Z"/></svg>
+    <div class="dentro">
+      <label class="conversa__para" id="l-msg" for="msg">A mensagem que vai para o 933 180 922<span class="conversa__dica" id="msg-dica" hidden>Pode mudar o texto aqui antes de enviar.</span></label>
+      <textarea class="balao" id="msg" rows="4" maxlength="1000" readonly autocapitalize="sentences">Olá, vi o site da AH e queria pedir um orçamento.
+Vou mandar 2 fotos: uma de longe e outra de perto.</textarea>
+      <div role="status">
+        <p id="msg-falta" class="balao__fim" hidden>Ainda não escolheu o tipo de obra.</p>
+        <p id="msg-editada" class="balao__fim" hidden><span id="msg-editada-txt">Mudou a mensagem à mão. O que escolher ou escrever no formulário já não entra nela.</span> <button type="button" class="balao__repor" id="msg-repor">Voltar à mensagem automática</button></p>
+      </div>
+      <div class="conversa__acoes" data-esconde-barra>
+        <a class="botao botao--dourado" id="wa-pedido" data-wa-pedido href="https://wa.me/351933180922?text=Ol%C3%A1%2C%20vi%20o%20site%20da%20AH%20e%20queria%20pedir%20um%20or%C3%A7amento.%0AVou%20mandar%202%20fotos%3A%20uma%20de%20longe%20e%20outra%20de%20perto.">Abrir no WhatsApp com esta mensagem</a>
+        <a class="botao botao--contorno" id="email-pedido" href="mailto:remodelacoes.ah@gmail.com?subject=Pedido%20de%20or%C3%A7amento&amp;body=Ol%C3%A1%2C%20vi%20o%20site%20da%20AH%20e%20queria%20pedir%20um%20or%C3%A7amento.">Prefiro email</a>
+      </div>
+      <p class="fotos-instrucao">Depois, no WhatsApp, junte duas fotos: uma de longe, para se ver o sítio, e outra de perto, para se ver o problema.</p>
+      <p class="honesto">O preço a sério só depois de ver o sítio. As fotos ajudam-nos a preparar a visita, não a substituem.</p>
+      <p class="nao-guarda">Esta página não guarda nada.</p>
+
+      <h3 class="passos-titulo">O que acontece a seguir</h3>
+      <ol class="passos">
+        <li><strong>Vemos as fotos e ligamos</strong>Para perceber a obra e marcar a visita.</li>
+        <li><strong>Na visita</strong>Vemos o sítio, medimos e tiramos dúvidas.</li>
+        <li><strong>Orçamento por escrito</strong>Recebe-o depois da visita.</li>
+        <li><strong>A obra só começa quando disser que sim</strong>Até lá, é só um orçamento.</li>
+      </ol>
+      <p class="nota-prazo">Prazo de resposta: a confirmar.</p>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="rodape">
+  <svg class="papel" viewBox="0 0 1600 1000" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path d="M0,0 L920.6,0 C978.2,159.4 985,331.1 983.3,500 C983.6,667.4 949.2,832.1 946.5,1000 L0,1000 Z"/></svg>
+  <div class="rodape__marca">
+    <div class="marca-grande">
+      <img src="assets/img/logo-completo-948.png" width="948" height="408" loading="lazy" decoding="async" alt="Logótipo da AH Construções e Remodelações">
+      <p class="assinatura">CONSTRUÇÕES E<br>REMODELAÇÕES TOTAIS</p>
+    </div>
+    <p class="rodape__local">AH Construções e Remodelações, Cartaxo</p>
+  </div>
+  <div class="rodape__legal no-grafite">
+    <svg class="deitada" viewBox="0 0 1000 66" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path fill="#FFFFFF" d="M0,0 H1000 V25.9 C832.1,28.6 667.4,63 500,62.7 C331.1,64.4 159.4,57.6 0,0 Z"/></svg>
+    <div class="dentro">
+      <div>
+        <p><strong>Hassam Habitat Rénovation, Unipessoal&nbsp;Lda</strong></p>
+        <p>NIPC e n.º de matrícula 516509101</p>
+        <p>Capital social: 5.000 €</p>
+        <p>Alvará IMPIC n.º 100509-PAR, obras particulares, classe 2. <a href="https://www.impic.pt/impic/pt-pt/consultar/empresas-titulares-de-alvara-de-empreiteiro-de-obras-particulares" target="_blank" rel="noopener">Confirmar no IMPIC</a></p>
+        <p>Sede: Rua das Sesmarias, s/n, 2070-225&nbsp;Cartaxo</p>
+      </div>
+      <div class="rodape__contactos">
+        <p><a href="tel:+351933180922">933 180 922</a>, chamadas e WhatsApp</p>
+        <p><a href="mailto:remodelacoes.ah@gmail.com">remodelacoes.ah@gmail.com</a></p>
+      </div>
+      <div>
+        <p><a href="https://www.livroreclamacoes.pt/Inicio/" target="_blank" rel="noopener"><strong>Livro de Reclamações Eletrónico</strong></a></p>
+        <p>Litígios de consumo: CNIACC, Centro Nacional de Informação e Arbitragem de Conflitos de Consumo, <a href="https://www.cniacc.pt/" target="_blank" rel="noopener">www.cniacc.pt</a>. Mais informação no <a href="https://www.consumidor.gov.pt/" target="_blank" rel="noopener">Portal do Consumidor</a>.</p>
+        <p>Este site não usa cookies nem estatísticas de visitas.</p>
+      </div>
+      <p class="assinado">Amostra preparada por Emanuel.</p>
+    </div>
+  </div>
+</footer>
+</div>
+
+<nav class="barra" aria-label="Contacto rápido" data-barra>
+  <a class="botao botao--dourado" data-wa href="https://wa.me/351933180922?text=Ol%C3%A1%2C%20vi%20o%20site%20da%20AH%20e%20queria%20pedir%20um%20or%C3%A7amento.">WhatsApp</a>
+  <a class="botao botao--contorno" href="tel:+351933180922">Ligar</a>
+</nav>
+
+<dialog class="visor" id="visor" aria-label="Foto em grande">
+  <div class="visor__caixa">
+    <div class="visor__topo">
+      <p class="visor__onde"><span class="visor__grupo"></span><span class="visor__conta"></span></p>
+      <button type="button" class="visor__fechar" autofocus><svg viewBox="0 0 18 18" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square"><path d="M3 3l12 12M15 3L3 15"/></svg>Fechar</button>
+    </div>
+    <div class="visor__foto">
+     <div class="visor__fita">
+      <div class="visor__slide" hidden><picture><source type="image/avif"><img class="visor__img" alt="" draggable="false" decoding="async"></picture></div>
+      <div class="visor__slide" hidden><picture><source type="image/avif"><img class="visor__img" alt="" draggable="false" decoding="async"></picture></div>
+      <div class="visor__slide" hidden><picture><source type="image/avif"><img class="visor__img" alt="" draggable="false" decoding="async"></picture></div>
+     </div>
+    </div>
+    <div class="visor__legenda" aria-live="polite" aria-atomic="true"></div>
+    <div class="visor__nav">
+      <button type="button" class="visor__ant"><svg viewBox="0 0 18 18" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square"><path d="M11 3L5 9l6 6"/></svg><span class="visor__txt">Anterior</span></button>
+      <button type="button" class="visor__seg"><span class="visor__txt">Seguinte</span><svg viewBox="0 0 18 18" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square"><path d="M7 3l6 6-6 6"/></svg></button>
+    </div>
+  </div>
+</dialog>
+
+<script id="logica">
+/* Lógica pura (testada em Node, sem DOM): hora, mensagem e ligações. */
+var AH = (function () {
+  var TEL = '351933180922', EMAIL = 'remodelacoes.ah@gmail.com';
+  function dois(n) { return (n < 10 ? '0' : '') + n; }
+  function notaHora(d) {
+    var h = d.getHours();
+    if (h >= 20 || h < 8) {
+      return (h <= 1 ? 'É ' : 'São ') + dois(h) + ':' + dois(d.getMinutes()) + '. Pelo WhatsApp pode mandar já as fotos, sem incomodar ninguém a esta hora.';
+    }
+    return '';
+  }
+  function limpa(s) { return String(s || '').replace(/\s+/g, ' ').trim(); }
+  function linhas(p) {
+    var obra = limpa(p.obra), local = limpa(p.localidade), nome = limpa(p.nome), txt = limpa(p.descricao);
+    var l = ['Olá, vi o site da AH e queria pedir um orçamento.'];
+    if (obra) l.push('Obra: ' + (obra === 'Outra' ? 'não está na lista' : obra));
+    if (local) l.push('Localidade: ' + local);
+    if (nome) l.push('Nome: ' + nome);
+    if (txt) l.push('O que se passa: ' + txt);
+    return l;
+  }
+  function mensagem(p) {
+    return linhas(p).concat('Vou mandar 2 fotos: uma de longe e outra de perto.').join('\n');
+  }
+  /* texto: a mensagem mudada à mão no balão; sem ele, a mensagem sai dos campos */
+  function hrefWhatsApp(p, texto) {
+    var t = texto == null ? mensagem(p) : String(texto).trim();
+    return 'https://wa.me/' + TEL + (t ? '?text=' + encodeURIComponent(t) : '');
+  }
+  function hrefEmail(p, texto) {
+    var obra = limpa(p.obra), local = limpa(p.localidade);
+    var assunto = 'Pedido de orçamento' + (texto == null ? (obra && obra !== 'Outra' ? ': ' + obra : '') + (local ? ', ' + local : '') : '');
+    var t = texto == null ? '' : String(texto).trim();
+    var corpo = texto == null
+      ? linhas(p).concat('Telefone para me ligarem: ', 'Junto 2 fotos: uma de longe e outra de perto.').join('\r\n')
+      : (t ? t.replace(/\r?\n/g, '\r\n') + '\r\n\r\n' : '') + 'Telefone para me ligarem: ';
+    return 'mailto:' + EMAIL + '?subject=' + encodeURIComponent(assunto) + '&body=' + encodeURIComponent(corpo);
+  }
+  return { notaHora: notaHora, mensagem: mensagem, hrefWhatsApp: hrefWhatsApp, hrefEmail: hrefEmail };
+})();
+</script>
+<script id="js-visor">
+/* Visor: a foto em grande, que desliza com o dedo. Sem JavaScript (ou sem <dialog>), cada foto abre o JPEG grande. */
+(function () {
+  var d = document.getElementById('visor');
+  if (!d || typeof d.showModal != 'function') return;
+  var doc = document, html = doc.documentElement, vv = window.visualViewport,
+      calma = matchMedia('(prefers-reduced-motion: reduce)');
+  function q(s) { return d.querySelector(s); }
+  var zona = q('.visor__foto'), fita = q('.visor__fita'), slides = [].slice.call(d.querySelectorAll('.visor__slide')),
+      gr = q('.visor__grupo'), ct = q('.visor__conta'), lg = q('.visor__legenda'),
+      nav = q('.visor__nav'), ant = q('.visor__ant'), seg = q('.visor__seg'),
+      lista = [], i = 0, origem = null, aFechar = false, marca = 'v' + Date.now(),
+      anim = 0, depoisAnim = null, g = null, caixaW = 0, caixaH = 0;
+
+  function zoom() { return vv ? vv.scale : 1; }
+  function nosso() { return !!(history.state && history.state.visor === marca); }
+  /* espera pelo fim da transição; com movimento reduzido, ou se ela não acontecer, segue na mesma */
+  function depois(el, ms, fn) {
+    if (calma.matches) { fn(); return; }
+    var feito = false, t = setTimeout(vai, ms + 80);
+    function vai(e) {
+      if (feito || (e && e.target !== el)) return;
+      feito = true; clearTimeout(t); el.removeEventListener('transitionend', vai); fn();
+    }
+    el.addEventListener('transitionend', vai);
+  }
+
+  /* a foto inteira, nunca maior do que o ficheiro, com o tamanho certo antes de carregar */
+  function mede(s) {
+    if (!s.a || !caixaW) return;
+    var m = s.querySelector('img'), w = +m.getAttribute('width'), h = +m.getAttribute('height'),
+        e = Math.min(1, caixaW / w, caixaH / h);
+    m.style.width = Math.max(1, Math.floor(w * e)) + 'px';
+    m.style.height = Math.max(1, Math.floor(h * e)) + 'px';
+  }
+  function encaixa() {
+    if (!d.open) return;
+    var s = slides[1], cs = getComputedStyle(s);
+    caixaW = s.clientWidth - parseFloat(cs.paddingLeft) - parseFloat(cs.paddingRight);
+    caixaH = s.clientHeight - parseFloat(cs.paddingTop) - parseFloat(cs.paddingBottom);
+    slides.forEach(mede);
+  }
+  /* põe a foto k da lista num dos 3 lugares (anterior, atual, seguinte) */
+  function enche(s, k) {
+    var a = lista[k];
+    s.hidden = !a;
+    if (!a) { s.a = null; return; }
+    if (s.a === a) return;
+    s.a = a;
+    var src = s.querySelector('source'), m = s.querySelector('img'), t = a.querySelector('img');
+    m.removeAttribute('src');               /* nunca mostrar a foto anterior enquanto a nova carrega */
+    src.srcset = a.getAttribute('data-avif') || '';
+    m.alt = t ? t.alt : '';
+    m.setAttribute('width', a.getAttribute('data-w') || 800);
+    m.setAttribute('height', a.getAttribute('data-h') || 600);
+    m.src = a.href;
+    mede(s);
+  }
+  function posiciona() {
+    slides.forEach(function (s, n) {
+      s.style.setProperty('--p', n - 1);
+      if (n === 1) s.removeAttribute('aria-hidden'); else s.setAttribute('aria-hidden', 'true');
+    });
+  }
+  function textos() {
+    var f = lista[i].closest('figure'), c = f && f.querySelector('figcaption');
+    lg.textContent = '';
+    if (c) [].forEach.call(c.childNodes, function (n) { lg.appendChild(n.cloneNode(true)); });
+    ct.textContent = lista.length > 1 ? (i + 1) + ' de ' + lista.length : '';
+    nav.hidden = lista.length < 2;
+    ant.setAttribute('aria-disabled', i === 0);
+    seg.setAttribute('aria-disabled', i === lista.length - 1);
+  }
+  function mostra(n) {
+    i = n;
+    enche(slides[0], i - 1); enche(slides[1], i); enche(slides[2], i + 1);
+    posiciona(); textos(); encaixa();
+  }
+  /* depois de passar: o lugar que ficou para trás vai buscar a próxima foto */
+  function roda(k) {
+    i += k;
+    var s;
+    if (k > 0) { s = slides.shift(); slides.push(s); enche(s, i + 1); }
+    else { s = slides.pop(); slides.unshift(s); enche(s, i - 1); }
+    fita.style.transition = 'none';
+    fita.style.transform = '';
+    posiciona(); textos();
+    void fita.offsetWidth;
+  }
+  function desliza(x, fn) {
+    var eu = ++anim;
+    depoisAnim = fn || null;
+    fita.style.transition = 'transform 300ms cubic-bezier(.22,1,.36,1)';
+    fita.style.transform = 'translate3d(' + x + 'px,0,0)';
+    depois(fita, 300, function () {
+      if (eu !== anim) return;
+      var f = depoisAnim; depoisAnim = null;
+      fita.style.transition = 'none';
+      if (f) f(); else fita.style.transform = '';
+    });
+  }
+  /* uma passagem a meio acaba já (toque novo, tecla, fechar) */
+  function acaba() {
+    anim++;
+    var f = depoisAnim; depoisAnim = null;
+    fita.style.transition = 'none';
+    if (f) f(); else { fita.style.transform = ''; void fita.offsetWidth; }
+  }
+  /* as setas do teclado mudam sem animação; os botões e o dedo deslizam */
+  function passo(k, anima) {
+    acaba();
+    var n = i + k;
+    if (n < 0 || n >= lista.length) return;
+    if (!anima || calma.matches) { roda(k); return; }
+    desliza(-k * zona.clientWidth, function () { roda(k); });
+  }
+
+  /* deslizar: a foto segue o dedo; passa com 18% da largura ou com um gesto rápido */
+  function comeca(x, y) {
+    g = null;
+    if (lista.length < 2 || zoom() > 1.01) return;
+    acaba();
+    g = { x: x, y: y, dx: 0, eixo: '', pts: [] };
+  }
+  /* t = hora do próprio toque (e.timeStamp): mede bem a velocidade mesmo com o telemóvel ocupado */
+  function move(x, y, t) {
+    if (!g) return;
+    var dx = x - g.x, dy = y - g.y;
+    if (!g.eixo) {
+      if (Math.abs(dx) < 8 && Math.abs(dy) < 8) return;
+      g.eixo = Math.abs(dx) > Math.abs(dy) ? 'x' : 'y';
+    }
+    if (g.eixo !== 'x') return;
+    g.pts.push([x, t]);
+    while (g.pts.length > 2 && t - g.pts[0][1] > 100) g.pts.shift();
+    var fora = dx > 0 ? i === 0 : i === lista.length - 1;   /* nas pontas, resiste */
+    g.dx = fora ? dx / 3 : dx;
+    fita.style.transform = 'translate3d(' + g.dx + 'px,0,0)';
+  }
+  function solta(t) {
+    var a = g; g = null;
+    if (!a || a.eixo !== 'x') return;
+    var p = a.pts[0], u = a.pts[a.pts.length - 1], lim = zona.clientWidth * .18, k = 0,
+        vel = (!p || u[1] === p[1] || t - u[1] > 100) ? 0 : (u[0] - p[0]) / (u[1] - p[1]);
+    if (a.dx < 0 && (a.dx < -lim || vel < -.35)) k = 1;
+    else if (a.dx > 0 && (a.dx > lim || vel > .35)) k = -1;
+    if (k && (i + k < 0 || i + k >= lista.length)) k = 0;
+    if (k) desliza(-k * zona.clientWidth, function () { roda(k); });
+    else desliza(0);
+  }
+  function larga() { var a = g; g = null; if (a && a.eixo === 'x') desliza(0); }
+
+  zona.addEventListener('touchstart', function (e) {
+    if (e.touches.length === 1) comeca(e.touches[0].clientX, e.touches[0].clientY); else larga();
+  }, { passive: true });
+  zona.addEventListener('touchmove', function (e) {
+    if (e.touches.length === 1) move(e.touches[0].clientX, e.touches[0].clientY, e.timeStamp); else larga();
+  }, { passive: true });
+  zona.addEventListener('touchend', function (e) { if (!e.touches.length) solta(e.timeStamp); }, { passive: true });
+  zona.addEventListener('touchcancel', larga, { passive: true });
+  /* com o rato também se arrasta */
+  zona.addEventListener('pointerdown', function (e) {
+    if (e.pointerType === 'touch' || e.button !== 0) return;
+    comeca(e.clientX, e.clientY);
+    if (g) zona.setPointerCapture(e.pointerId);
+  });
+  zona.addEventListener('pointermove', function (e) { if (e.pointerType !== 'touch') move(e.clientX, e.clientY, e.timeStamp); });
+  zona.addEventListener('pointerup', function (e) { if (e.pointerType !== 'touch') solta(e.timeStamp); });
+  zona.addEventListener('pointercancel', function (e) { if (e.pointerType !== 'touch') larga(); });
+
+  /* abrir: um só ouvinte para todas as fotos; com Ctrl/Cmd o JPEG abre noutro separador */
+  doc.addEventListener('click', function (e) {
+    var a = e.target.closest && e.target.closest('a[data-visor]');
+    if (!a || d.open || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+    e.preventDefault();
+    lista = [].slice.call(doc.querySelectorAll('a[data-visor="' + a.getAttribute('data-visor') + '"]'));
+    var sec = a.closest('[data-visor-titulo]');
+    gr.textContent = sec ? sec.getAttribute('data-visor-titulo') : '';
+    origem = a; aFechar = false;
+    d.showModal();
+    html.classList.add('visor-aberto');
+    mostra(lista.indexOf(a));
+    void d.offsetWidth;
+    d.classList.add('aberto');
+    /* o Voltar do telemóvel fecha o visor em vez de sair da página */
+    try { history.pushState({ visor: marca }, ''); } catch (err) {}
+  });
+
+  /* fechar: pelo botão, Esc ou Voltar; desvanece e devolve o foco à foto */
+  function pedeFecho() { if (nosso()) history.back(); else fecha(); }
+  function fecha() {
+    if (!d.open || aFechar) return;
+    aFechar = true;
+    d.classList.remove('aberto');
+    depois(d, 200, function () { if (d.open) d.close(); });
+  }
+  d.addEventListener('close', function () {
+    aFechar = false; g = null; acaba();
+    d.classList.remove('aberto');
+    html.classList.remove('visor-aberto');
+    if (nosso()) history.back();             /* fechado por outra via: tira a entrada do histórico */
+    if (origem) origem.focus({ preventScroll: true });
+  });
+  d.addEventListener('cancel', function (e) { e.preventDefault(); pedeFecho(); });
+  addEventListener('popstate', function () { if (d.open) fecha(); });
+  q('.visor__fechar').addEventListener('click', pedeFecho);
+
+  ant.addEventListener('click', function (e) { passo(-1, e.detail > 0); });
+  seg.addEventListener('click', function (e) { passo(1, e.detail > 0); });
+  d.addEventListener('keydown', function (e) {
+    if (e.key === 'ArrowLeft') { e.preventDefault(); passo(-1); }
+    else if (e.key === 'ArrowRight') { e.preventDefault(); passo(1); }
+  });
+  addEventListener('resize', encaixa);
+})();
+</script>
+<script>
+(function () {
+  var d = document;
+  /* 1. a hora do visitante, só à noite */
+  var nota = d.querySelector('[data-hora-nota]'), t = AH.notaHora(new Date());
+  if (nota && t) { nota.textContent = t; nota.hidden = false; }
+
+  /* 2. o pedido escreve a mensagem */
+  var f = d.getElementById('form-pedido'), out = d.getElementById('msg'),
+      wa = d.getElementById('wa-pedido'), em = d.getElementById('email-pedido'),
+      falta = d.getElementById('msg-falta'), chips = d.querySelectorAll('.chip'), obra = '',
+      editada = false, aviso = d.getElementById('msg-editada'), repor = d.getElementById('msg-repor'),
+      cabe = window.CSS && CSS.supports && CSS.supports('field-sizing', 'content');
+  function dados() { return { obra: obra, localidade: f.localidade.value, nome: f.nome.value, descricao: f.descricao.value }; }
+  /* o balão cresce com o texto (onde o field-sizing ainda não chegou) */
+  function cresce() {
+    if (cabe) return;
+    out.style.height = 'auto';
+    out.style.height = out.scrollHeight + 'px';
+  }
+  function atualiza() {
+    var p = dados();
+    /* depois de o cliente mexer no balão, os campos já não lhe tocam */
+    if (!editada) out.value = AH.mensagem(p);
+    wa.href = AH.hrefWhatsApp(p, editada ? out.value : null);
+    em.href = AH.hrefEmail(p, editada ? out.value : null);
+    if (aviso) aviso.hidden = !editada;
+    var ca = d.getElementById('campos-editada');
+    if (ca && ca.hidden === editada) {
+      var y = out.getBoundingClientRect().top;
+      ca.hidden = !editada;
+      scrollBy(0, out.getBoundingClientRect().top - y);
+    }
+    cresce();
+    /* os outros botões de WhatsApp (barra, topo) levam a mesma mensagem, se já houver alguma coisa escrita */
+    var escrito = p.localidade.trim() || p.nome.trim() || p.descricao.trim();
+    d.querySelectorAll('[data-wa]').forEach(function (a) {
+      if (!a.dataset.base) a.dataset.base = a.getAttribute('href');
+      a.href = (p.obra || escrito || editada) ? wa.href : a.dataset.base;
+    });
+    if (falta) falta.hidden = editada || !(escrito && !p.obra);
+    var desc = [];
+    if (falta && !falta.hidden) desc.push('msg-falta');
+    if (editada) desc.push('msg-editada-txt');
+    if (desc.length) out.setAttribute('aria-describedby', desc.join(' ')); else out.removeAttribute('aria-describedby');
+  }
+  function escolhe(nome) {
+    obra = nome;
+    chips.forEach(function (c) { c.setAttribute('aria-pressed', c.getAttribute('data-obra') === nome ? 'true' : 'false'); });
+    atualiza();
+  }
+  if (f && out && wa && em) {
+    f.addEventListener('submit', function (e) { e.preventDefault(); });
+    f.addEventListener('input', atualiza);
+    out.readOnly = false;
+    d.getElementById('msg-dica').hidden = false;
+    out.addEventListener('input', function () { editada = out.value !== AH.mensagem(dados()); atualiza(); });
+    if (repor) repor.addEventListener('click', function () {
+      editada = false;
+      atualiza();
+      /* o botão desaparece: o foco vai para o balão (teclado) ou para o WhatsApp (toque, sem abrir o teclado) */
+      (matchMedia('(pointer: coarse)').matches ? wa : out).focus();
+    });
+    var largura = innerWidth;
+    addEventListener('resize', function () { if (innerWidth !== largura) { largura = innerWidth; cresce(); } });
+    addEventListener('pageshow', atualiza);
+    /* Enter passa ao campo seguinte; no telemóvel, o Enter da caixa de texto fecha o teclado e mostra a mensagem */
+    f.addEventListener('keydown', function (e) {
+      if (e.key !== 'Enter' || e.isComposing || e.shiftKey) return;
+      if (e.target === f.localidade) { e.preventDefault(); f.nome.focus(); }
+      else if (e.target === f.nome) { e.preventDefault(); f.descricao.focus(); }
+    });
+    f.descricao.addEventListener('beforeinput', function (e) {
+      if (!matchMedia('(pointer: coarse)').matches) return;
+      if (e.inputType !== 'insertLineBreak' && e.inputType !== 'insertParagraph') return;
+      e.preventDefault(); f.descricao.blur();
+      d.getElementById('l-msg').scrollIntoView({ block: 'start' });
+    });
+    chips.forEach(function (c) {
+      c.addEventListener('click', function () {
+        var n = c.getAttribute('data-obra');
+        escolhe(obra === n ? '' : n);
+      });
+    });
+    d.querySelectorAll('.oficio[data-obra]').forEach(function (a) {
+      a.addEventListener('click', function (e) {
+        escolhe(a.getAttribute('data-obra'));
+        /* no telemóvel, salta logo para os tipos de obra, com o escolhido já marcado */
+        if (!matchMedia('(max-width: 899px)').matches) return;
+        e.preventDefault();
+        history.pushState(null, '', '#pedido');
+        d.getElementById('grupo-obra').scrollIntoView({ block: 'start' });
+      });
+    });
+    atualiza();
+  }
+
+  /* 3. a barra de baixo sai quando há outros botões de contacto inteiros no ecrã, e no pedido */
+  var barra = d.querySelector('[data-barra]');
+  if (barra && 'IntersectionObserver' in window) {
+    var vis = new Set(), m = barra.offsetHeight || 64,
+        botoes = d.querySelectorAll('[data-esconde-barra]:not(section)'),
+        seccoes = d.querySelectorAll('section[data-esconde-barra]');
+    var marca = function (el, sim) { if (sim) vis.add(el); else vis.delete(el); };
+    /* esconde logo; volta só quando o ecrã fica quieto 140 ms, para não piscar nos limites */
+    var espera = 0;
+    var poe = function () {
+      clearTimeout(espera);
+      if (vis.size > 0) barra.classList.add('fora');
+      else espera = setTimeout(function () { barra.classList.remove('fora'); }, 140);
+    };
+    /* os blocos de botões só contam quando se veem quase inteiros: no iPhone SE os do topo ficam a meio */
+    botoes.forEach(function (el) {
+      var r = el.getBoundingClientRect();
+      marca(el, r.height > 0 && (Math.min(r.bottom, innerHeight) - Math.max(r.top, 0)) / r.height >= .89);
+    });
+    /* o pedido conta assim que passa a linha da barra, para ela não tapar os campos */
+    seccoes.forEach(function (el) {
+      var r = el.getBoundingClientRect();
+      marca(el, r.height > 0 && r.top < innerHeight - m && r.bottom > 0);
+    });
+    /* o estado inicial entra sem animação */
+    barra.classList.add('quieta');
+    barra.classList.toggle('fora', vis.size > 0);
+    void barra.offsetHeight;
+    requestAnimationFrame(function () { requestAnimationFrame(function () { barra.classList.remove('quieta'); }); });
+    var ioB = new IntersectionObserver(function (es) {
+      es.forEach(function (e) { marca(e.target, e.intersectionRatio >= .89); });
+      poe();
+    }, { threshold: [0, .89, 1] });
+    var ioS = new IntersectionObserver(function (es) {
+      es.forEach(function (e) { marca(e.target, e.isIntersecting); });
+      poe();
+    }, { rootMargin: '0px 0px -' + m + 'px 0px' });
+    botoes.forEach(function (el) { ioB.observe(el); });
+    seccoes.forEach(function (el) { ioS.observe(el); });
+  }
+  /* o Safari do iPhone só mostra o :active com um ouvinte de toque */
+  d.addEventListener('touchstart', function () {}, { passive: true });
+})();
+</script>
+</body>
+</html>

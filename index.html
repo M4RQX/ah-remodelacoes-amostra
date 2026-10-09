@@ -458,6 +458,8 @@ html{scrollbar-gutter:stable}
 html.visor-aberto{overflow:hidden;overscroll-behavior:none}
 .visor{position:fixed;inset:0;width:100%;height:100%;max-width:none;max-height:none;margin:0;padding:0;border:0;background:var(--tinta);color:var(--branco);overflow:hidden;opacity:0;transition:opacity 200ms ease}
 .visor.aberto{opacity:1}
+.visor:not([open]){display:none}
+.visor:focus{outline:none}
 .visor::backdrop{background:transparent}
 .visor :focus-visible{outline:3px solid var(--dourado);outline-offset:3px}
 .visor__caixa{height:100%;display:grid;grid-template-rows:auto minmax(0,1fr) auto auto}
@@ -470,12 +472,13 @@ html.visor-aberto{overflow:hidden;overscroll-behavior:none}
 @media (hover:hover){.visor button:hover{background:rgba(255,255,255,.1)}}
 .visor button:active{background:rgba(255,255,255,.18)}
 .visor button[aria-disabled="true"]{opacity:.35;cursor:default;background:transparent}
+@media (forced-colors:active){.visor button{border:2px solid ButtonText}.visor button[aria-disabled="true"]{opacity:1;color:GrayText;border-color:GrayText}}
 .visor__foto{position:relative;min-height:0;overflow:hidden;user-select:none;-webkit-user-select:none;-webkit-touch-callout:none;transform:scale(.97);transition:transform 260ms cubic-bezier(.22,1,.36,1)}
 .visor.aberto .visor__foto{transform:none}
 .visor__fita{position:absolute;inset:0;will-change:transform}
 .visor__slide{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;padding:4px var(--gutter);transform:translateX(calc(var(--p,0) * 100%))}
 .visor__slide[hidden]{display:none}
-.visor__img{max-width:none;border-radius:24px 0 0 0;background:var(--grafite-escuro);-webkit-user-drag:none}
+.visor__img{max-width:none;border-radius:24px 0 0 0;background:var(--grafite-escuro);-webkit-user-drag:none;background-size:100% 100%;background-repeat:no-repeat}
 .visor__legenda{width:100%;max-width:60ch;min-height:calc(2.9em + 16px);margin-inline:auto;padding:12px var(--gutter) 4px;font-size:16px;line-height:1.45;color:var(--branco)}
 .visor__legenda .fase{display:inline;margin-right:.35em;color:var(--dourado)}
 .visor__nav{display:grid;grid-template-columns:1fr 1fr;gap:8px;padding:8px var(--gutter) calc(12px + env(safe-area-inset-bottom))}
@@ -489,14 +492,25 @@ html.visor-aberto{overflow:hidden;overscroll-behavior:none}
   .visor__nav button{pointer-events:auto;min-width:56px;padding:0 12px}
   .visor__txt{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
   .visor__slide{padding-inline:calc(56px + 24px + max(12px, env(safe-area-inset-left), env(safe-area-inset-right)))}
+  .visor__topo{padding-inline:max(12px, env(safe-area-inset-left)) max(12px, env(safe-area-inset-right))}
 }
+/* telemóvel deitado estreito: a legenda guarda sempre 2 linhas, para a foto não saltar ao passar */
+@media (orientation:landscape) and (max-height:500px) and (max-width:899px){ .visor__legenda{min-height:calc(2.9em + 10px)} }
 /* computador: setas dos lados, e a foto com margem para elas nunca a taparem */
 @media (min-width:900px){
   .visor__nav{position:fixed;left:0;right:0;top:calc(50% - 28px);display:flex;justify-content:space-between;padding:0 24px;pointer-events:none}
   .visor__nav button{pointer-events:auto;min-width:132px}
   .visor__slide{padding-inline:172px}
   .visor__legenda{max-width:none;padding-inline:172px;text-align:center}
+  .visor__topo{padding-inline:max(24px, env(safe-area-inset-left)) max(24px, env(safe-area-inset-right))}
 }
+@media (min-width:600px), (orientation:landscape) and (max-height:500px){.visor__legenda{text-align:center}}
+/* topo: ilustração até chegar a melhor foto de obra (sem visor) */
+.hero__foto .hero__ilustra{object-position:50% 60%}
+@media (min-width:900px){.hero__foto .hero__ilustra{object-position:100% 50%}}
+/* ecrãs mais altos que largos para o meio painel: a obra recua para não ficar atrás da curva */
+@media (min-width:900px) and (max-aspect-ratio:3/2){.hero__foto .hero__ilustra{object-position:66% 50%}}
+@media (min-width:900px) and (max-aspect-ratio:1/1){.hero__foto .hero__ilustra{object-position:47% 50%}}
 
 /* a obra-12 é ao alto: no recorte largo, ficam as paredes e os ferros, não o chão */
 .foto-alto img{object-position:50% 30%}
@@ -566,8 +580,8 @@ html.visor-aberto{overflow:hidden;overscroll-behavior:none}
     </div>
     <p class="hora-nota" data-hora-nota hidden></p>
     <figure class="hero__foto">
-      <a class="foto-link" href="assets/fotos/obra-05-1200.jpg" data-avif="assets/fotos/obra-05-1200.avif" data-w="800" data-h="1422" data-visor="topo"><picture><source type="image/avif" srcset="assets/fotos/topo-640.avif 640w, assets/fotos/topo-800.avif 800w" sizes="(min-width:900px) 50vw, 100vw"><img src="assets/fotos/topo-800.jpg" srcset="assets/fotos/topo-640.jpg 640w, assets/fotos/topo-800.jpg 800w" sizes="(min-width:900px) 50vw, 100vw" width="800" height="992" fetchpriority="high" decoding="async" alt="Duche com azulejo verde ao alto e parede com papel de folhas"></picture><span class="so-leitor">, abrir em grande</span></a>
-      <figcaption>Papel de parede e azulejo numa casa de banho.</figcaption>
+      <picture><source media="(min-width:900px)" srcset="assets/img/obra-ilustrada-comp.svg" width="1200" height="1040"><img class="hero__ilustra" src="assets/img/obra-ilustrada.svg" width="1200" height="1000" fetchpriority="high" decoding="async" alt="Ilustração de uma casa em obra, com o anexo em aço leve, um andaime e uma mini giratória"></picture>
+      <figcaption>Aqui entra a melhor foto de obra da AH.</figcaption>
     </figure>
   </div>
 </div>
@@ -790,10 +804,10 @@ Vou mandar 2 fotos: uma de longe e outra de perto.</textarea>
   <a class="botao botao--contorno" href="tel:+351933180922">Ligar</a>
 </nav>
 
-<dialog class="visor" id="visor" aria-label="Foto em grande">
+<dialog class="visor" id="visor" tabindex="-1" aria-label="Foto em grande">
   <div class="visor__caixa">
     <div class="visor__topo">
-      <p class="visor__onde"><span class="visor__grupo"></span><span class="visor__conta"></span></p>
+      <p class="visor__onde"><span class="visor__grupo"></span><span class="visor__conta" aria-hidden="true"></span></p>
       <button type="button" class="visor__fechar" autofocus><svg viewBox="0 0 18 18" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square"><path d="M3 3l12 12M15 3L3 15"/></svg>Fechar</button>
     </div>
     <div class="visor__foto">
@@ -803,7 +817,8 @@ Vou mandar 2 fotos: uma de longe e outra de perto.</textarea>
       <div class="visor__slide" hidden><picture><source type="image/avif"><img class="visor__img" alt="" draggable="false" decoding="async"></picture></div>
      </div>
     </div>
-    <div class="visor__legenda" aria-live="polite" aria-atomic="true"></div>
+    <div class="visor__legenda" aria-hidden="true"></div>
+    <p class="so-leitor" id="visor-diz" aria-live="polite" aria-atomic="true"></p>
     <div class="visor__nav">
       <button type="button" class="visor__ant"><svg viewBox="0 0 18 18" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square"><path d="M11 3L5 9l6 6"/></svg><span class="visor__txt">Anterior</span></button>
       <button type="button" class="visor__seg"><span class="visor__txt">Seguinte</span><svg viewBox="0 0 18 18" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square"><path d="M7 3l6 6-6 6"/></svg></button>
@@ -863,9 +878,10 @@ var AH = (function () {
   function q(s) { return d.querySelector(s); }
   var zona = q('.visor__foto'), fita = q('.visor__fita'), slides = [].slice.call(d.querySelectorAll('.visor__slide')),
       gr = q('.visor__grupo'), ct = q('.visor__conta'), lg = q('.visor__legenda'),
-      nav = q('.visor__nav'), ant = q('.visor__ant'), seg = q('.visor__seg'),
-      lista = [], i = 0, origem = null, aFechar = false, marca = 'v' + Date.now(),
-      anim = 0, depoisAnim = null, g = null, caixaW = 0, caixaH = 0;
+      nav = q('.visor__nav'), ant = q('.visor__ant'), seg = q('.visor__seg'), diz = q('#visor-diz'),
+      /* depois de recarregar a página, a entrada do histórico que já lá estava continua a ser nossa */
+      lista = [], i = 0, origem = null, aFechar = false, aVoltar = false, marca = (history.state && history.state.visor) || 'v' + Date.now(),
+      anim = 0, depoisAnim = null, porToque = false, g = null, caixaW = 0, caixaH = 0;
 
   function zoom() { return vv ? vv.scale : 1; }
   function nosso() { return !!(history.state && history.state.visor === marca); }
@@ -904,6 +920,9 @@ var AH = (function () {
     s.a = a;
     var src = s.querySelector('source'), m = s.querySelector('img'), t = a.querySelector('img');
     m.removeAttribute('src');               /* nunca mostrar a foto anterior enquanto a nova carrega */
+    var w = +a.getAttribute('data-w'), h = +a.getAttribute('data-h');
+    /* enquanto carrega, a pequena da página (se for o mesmo corte) em vez de uma caixa vazia */
+    m.style.backgroundImage = (t && t.complete && t.naturalWidth && Math.abs(t.naturalWidth / t.naturalHeight - w / h) < .02) ? 'url("' + t.currentSrc + '")' : '';
     src.srcset = a.getAttribute('data-avif') || '';
     m.alt = t ? t.alt : '';
     m.setAttribute('width', a.getAttribute('data-w') || 800);
@@ -922,6 +941,7 @@ var AH = (function () {
     lg.textContent = '';
     if (c) [].forEach.call(c.childNodes, function (n) { lg.appendChild(n.cloneNode(true)); });
     ct.textContent = lista.length > 1 ? (i + 1) + ' de ' + lista.length : '';
+    diz.textContent = (ct.textContent ? 'Foto ' + ct.textContent + '. ' : '') + (c ? [].map.call(c.childNodes, function (n) { return n.textContent.trim(); }).filter(Boolean).join(' ') : '');
     nav.hidden = lista.length < 2;
     ant.setAttribute('aria-disabled', i === 0);
     seg.setAttribute('aria-disabled', i === lista.length - 1);
@@ -939,15 +959,16 @@ var AH = (function () {
     else { s = slides.pop(); slides.unshift(s); enche(s, i - 1); }
     fita.style.transition = 'none';
     fita.style.transform = '';
-    posiciona(); textos();
+    posiciona(); textos(); encaixa();
     void fita.offsetWidth;
   }
-  function desliza(x, fn) {
+  function desliza(x, fn, ms, curva) {
     var eu = ++anim;
+    ms = ms || 300; alvoX = x;
     depoisAnim = fn || null;
-    fita.style.transition = 'transform 300ms cubic-bezier(.22,1,.36,1)';
+    fita.style.transition = 'transform ' + ms + 'ms ' + (curva || 'cubic-bezier(.22,1,.36,1)');
     fita.style.transform = 'translate3d(' + x + 'px,0,0)';
-    depois(fita, 300, function () {
+    depois(fita, ms, function () {
       if (eu !== anim) return;
       var f = depoisAnim; depoisAnim = null;
       fita.style.transition = 'none';
@@ -960,6 +981,17 @@ var AH = (function () {
     var f = depoisAnim; depoisAnim = null;
     fita.style.transition = 'none';
     if (f) f(); else { fita.style.transform = ''; void fita.offsetWidth; }
+  }
+  /* um toque novo a meio de uma passagem agarra a fita onde ela está; a passagem em curso já conta */
+  var alvoX = 0;
+  function apanha() {
+    var W = zona.clientWidth, x = new DOMMatrix(getComputedStyle(fita).transform).m41 || 0, f = depoisAnim;
+    anim++; depoisAnim = null;
+    fita.style.transition = 'none';
+    if (f) { f(); x += alvoX < 0 ? W : -W; }
+    x = Math.max(-W, Math.min(W, x));          /* a fita só tem uma foto de cada lado */
+    fita.style.transform = x ? 'translate3d(' + x + 'px,0,0)' : '';
+    return x;
   }
   /* as setas do teclado mudam sem animação; os botões e o dedo deslizam */
   function passo(k, anima) {
@@ -974,8 +1006,8 @@ var AH = (function () {
   function comeca(x, y) {
     g = null;
     if (lista.length < 2 || zoom() > 1.01) return;
-    acaba();
-    g = { x: x, y: y, dx: 0, eixo: '', pts: [] };
+    var x0 = apanha();
+    g = { x: x, y: y, x0: x0, dx: x0, eixo: '', pts: [] };
   }
   /* t = hora do próprio toque (e.timeStamp): mede bem a velocidade mesmo com o telemóvel ocupado */
   function move(x, y, t) {
@@ -988,22 +1020,26 @@ var AH = (function () {
     if (g.eixo !== 'x') return;
     g.pts.push([x, t]);
     while (g.pts.length > 2 && t - g.pts[0][1] > 100) g.pts.shift();
-    var fora = dx > 0 ? i === 0 : i === lista.length - 1;   /* nas pontas, resiste */
-    g.dx = fora ? dx / 3 : dx;
+    var W = zona.clientWidth, v = g.x0 + dx, fora = v > 0 ? i === 0 : i === lista.length - 1;   /* nas pontas, resiste */
+    g.dx = Math.max(-W, Math.min(W, fora ? v / 3 : v));
     fita.style.transform = 'translate3d(' + g.dx + 'px,0,0)';
   }
   function solta(t) {
     var a = g; g = null;
-    if (!a || a.eixo !== 'x') return;
+    if (!a) return;
+    if (a.eixo !== 'x') { if (a.x0) desliza(0); return; }
     var p = a.pts[0], u = a.pts[a.pts.length - 1], lim = zona.clientWidth * .18, k = 0,
         vel = (!p || u[1] === p[1] || t - u[1] > 100) ? 0 : (u[0] - p[0]) / (u[1] - p[1]);
-    if (a.dx < 0 && (a.dx < -lim || vel < -.35)) k = 1;
-    else if (a.dx > 0 && (a.dx > lim || vel > .35)) k = -1;
+    var W = zona.clientWidth, r = a.dx - a.x0;       /* r: o que o dedo andou neste gesto */
+    if (r < 0 && (r < -lim || vel < -.35)) k = 1;
+    else if (r > 0 && (r > lim || vel > .35)) k = -1;
+    else k = a.dx < -W / 2 ? 1 : a.dx > W / 2 ? -1 : 0;   /* sem gesto: a foto mais perto */
     if (k && (i + k < 0 || i + k >= lista.length)) k = 0;
-    if (k) desliza(-k * zona.clientWidth, function () { roda(k); });
-    else desliza(0);
+    var alvo = -k * W,
+        ms = Math.round(Math.min(300, Math.max(180, 2 * Math.abs(alvo - a.dx) / Math.max(Math.abs(vel), .1))));
+    desliza(alvo, k ? function () { roda(k); } : null, ms, 'cubic-bezier(.3,.6,.4,1)');
   }
-  function larga() { var a = g; g = null; if (a && a.eixo === 'x') desliza(0); }
+  function larga() { var a = g; g = null; if (a && (a.eixo === 'x' || a.x0)) desliza(0); }
 
   zona.addEventListener('touchstart', function (e) {
     if (e.touches.length === 1) comeca(e.touches[0].clientX, e.touches[0].clientY); else larga();
@@ -1031,18 +1067,26 @@ var AH = (function () {
     lista = [].slice.call(doc.querySelectorAll('a[data-visor="' + a.getAttribute('data-visor') + '"]'));
     var sec = a.closest('[data-visor-titulo]');
     gr.textContent = sec ? sec.getAttribute('data-visor-titulo') : '';
-    origem = a; aFechar = false;
+    origem = a; aFechar = false; aVoltar = false;
     d.showModal();
+    porToque = e.detail > 0;
+    if (porToque) d.focus({ preventScroll: true });
     html.classList.add('visor-aberto');
     mostra(lista.indexOf(a));
     void d.offsetWidth;
     d.classList.add('aberto');
     /* o Voltar do telemóvel fecha o visor em vez de sair da página */
-    try { history.pushState({ visor: marca }, ''); } catch (err) {}
+    if (!nosso()) try { history.pushState({ visor: marca }, ''); } catch (err) {}
   });
 
   /* fechar: pelo botão, Esc ou Voltar; desvanece e devolve o foco à foto */
-  function pedeFecho() { if (nosso()) history.back(); else fecha(); }
+  function pedeFecho() {
+    if (aVoltar) return;                    /* já pediu o Voltar: um 2.º toque antes do popstate sairia da página */
+    if (nosso()) {
+      aVoltar = true; history.back();
+      setTimeout(function () { if (aVoltar) fecha(); }, 500);   /* rede de segurança: fecha sem novo back() */
+    } else fecha();
+  }
   function fecha() {
     if (!d.open || aFechar) return;
     aFechar = true;
@@ -1053,11 +1097,16 @@ var AH = (function () {
     aFechar = false; g = null; acaba();
     d.classList.remove('aberto');
     html.classList.remove('visor-aberto');
-    if (nosso()) history.back();             /* fechado por outra via: tira a entrada do histórico */
-    if (origem) origem.focus({ preventScroll: true });
+    if (nosso() && !aVoltar) { aVoltar = true; history.back(); }   /* fechado por outra via: tira a entrada do histórico */
+    if (origem) {
+      origem.focus({ preventScroll: true, focusVisible: !porToque });
+      /* se rodou o telemóvel com o visor aberto, a foto pode ter ficado fora do ecrã */
+      var r = origem.getBoundingClientRect();
+      if (r.bottom < 0 || r.top > innerHeight) origem.scrollIntoView({ block: 'center' });
+    }
   });
   d.addEventListener('cancel', function (e) { e.preventDefault(); pedeFecho(); });
-  addEventListener('popstate', function () { if (d.open) fecha(); });
+  addEventListener('popstate', function () { aVoltar = false; if (d.open) fecha(); });
   q('.visor__fechar').addEventListener('click', pedeFecho);
 
   ant.addEventListener('click', function (e) { passo(-1, e.detail > 0); });
@@ -1096,6 +1145,10 @@ var AH = (function () {
     wa.href = AH.hrefWhatsApp(p, editada ? out.value : null);
     em.href = AH.hrefEmail(p, editada ? out.value : null);
     if (aviso) aviso.hidden = !editada;
+    ['grupo-obra', 'c-local', 'c-nome', 'c-texto'].forEach(function (id) {
+      var el = d.getElementById(id);
+      if (el) { if (editada) el.setAttribute('aria-describedby', 'campos-editada'); else el.removeAttribute('aria-describedby'); }
+    });
     var ca = d.getElementById('campos-editada');
     if (ca && ca.hidden === editada) {
       var y = out.getBoundingClientRect().top;
@@ -1134,7 +1187,18 @@ var AH = (function () {
     });
     var largura = innerWidth;
     addEventListener('resize', function () { if (innerWidth !== largura) { largura = innerWidth; cresce(); } });
-    addEventListener('pageshow', atualiza);
+    /* voltar sem bfcache ou separador recarregado: o browser repõe o balão e os campos. Recupera a obra e
+       a edição a partir do próprio texto, sem guardar nada, em vez de escrever por cima. */
+    function recupera() {
+      if (editada || out.value === out.defaultValue || out.value === AH.mensagem(dados())) return;
+      var o = /^Obra: (.+)$/m.exec(out.value), n = o ? (o[1] === 'não está na lista' ? 'Outra' : o[1]) : '';
+      if (!obra && [].some.call(chips, function (c) { return c.getAttribute('data-obra') === n; })) {
+        obra = n;
+        chips.forEach(function (c) { c.setAttribute('aria-pressed', c.getAttribute('data-obra') === n ? 'true' : 'false'); });
+      }
+      editada = out.value !== AH.mensagem(dados());
+    }
+    addEventListener('pageshow', function (e) { if (!e.persisted) recupera(); atualiza(); });
     /* Enter passa ao campo seguinte; no telemóvel, o Enter da caixa de texto fecha o teclado e mostra a mensagem */
     f.addEventListener('keydown', function (e) {
       if (e.key !== 'Enter' || e.isComposing || e.shiftKey) return;
@@ -1163,6 +1227,7 @@ var AH = (function () {
         d.getElementById('grupo-obra').scrollIntoView({ block: 'start' });
       });
     });
+    recupera();
     atualiza();
   }
 

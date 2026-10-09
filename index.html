@@ -151,16 +151,17 @@ h1,h2,h3{font-family:var(--titulo);font-weight:700;line-height:1.1;letter-spacin
 .painel-servicos{background:var(--grafite);color:var(--branco);padding-block:clamp(48px,6vw,88px)}
 .grupo{display:grid;gap:22px}
 .grupo + .grupo{margin-top:52px}
-.grupo h3{font-size:clamp(1.375rem,1.1rem + .8vw,1.75rem);color:var(--branco)}
-.grupo h3 span{display:block;margin-top:4px;font:400 16px/1.4 var(--letra);color:var(--grafite-claro);letter-spacing:0}
+.grupo h3{font-size:clamp(1.75rem,1.3rem + 1.4vw,2.5rem);color:var(--branco)}
 .grupo__foto img{width:100%;aspect-ratio:2/1;object-fit:cover;border-radius:var(--canto-g) 0 0 0}
 .grupo__foto figcaption{margin-top:8px;font-size:14px;line-height:1.4;color:var(--grafite-claro)}
-.oficios{display:grid;gap:2px;margin-top:6px}
+.oficios{display:grid;gap:2px;margin-top:12px}
 .oficio{display:block;padding:10px 0;text-decoration:none;color:var(--branco)}
-.oficio strong{font:600 1.1875rem/1.2 var(--titulo);text-decoration:underline;text-decoration-color:var(--dourado);text-decoration-thickness:2px;text-underline-offset:.28em}
-@media (hover:hover){.oficio:hover strong{text-decoration-thickness:4px}}
-.oficio:active strong{text-decoration-thickness:4px}
-.oficio span{display:block;margin-top:6px;font-size:16px;line-height:1.45;color:var(--grafite-claro)}
+.oficio strong{font:600 1.1875rem/1.3 var(--letra);color:var(--branco)}
+.oficio strong::after{content:"";display:inline-block;width:.42em;height:.42em;margin-left:.45em;border:solid var(--dourado);border-width:2px 2px 0 0;transform:rotate(45deg);vertical-align:.1em;transition:transform 150ms ease}
+@media (hover:hover){.oficio:hover strong::after{transform:translateX(3px) rotate(45deg)}}
+.oficio:active strong::after{transform:translateX(3px) rotate(45deg)}
+@media (forced-colors:active){.oficio strong::after{border-color:LinkText}}
+.oficio span{display:block;margin-top:4px;font-size:15.5px;line-height:1.45;color:var(--grafite-claro)}
 
 /* ---------- máquinas ---------- */
 .maquinas__grelha{display:grid;gap:22px}
@@ -211,12 +212,11 @@ h1,h2,h3{font-family:var(--titulo);font-weight:700;line-height:1.1;letter-spacin
 .campo textarea{min-height:100px;resize:vertical}
 .campo input::placeholder,.campo textarea::placeholder{color:var(--apagado);opacity:1}
 .campo input:focus-visible,.campo textarea:focus-visible{outline:3px solid var(--tinta);outline-offset:2px}
-.honesto{margin-top:16px;max-width:34em;font-weight:500;color:var(--branco)}
 
 .pedido__conversa{position:relative;background:var(--grafite);color:var(--branco);padding:0 0 56px}
 .pedido__conversa .dentro{padding:8px var(--gutter) 0}
-.conversa__para{font-size:15px;color:var(--grafite-claro)}
-.conversa__dica{display:block;margin-top:2px}
+.conversa__para{display:block;font:600 17px/1.3 var(--letra);color:var(--branco)}
+.conversa__dica{font-weight:400;color:var(--grafite-claro)}
 .conversa__dica[hidden]{display:none}
 .balao{display:block;width:100%;max-width:34em;min-height:8.5em;margin:10px 0 0;padding:16px 18px;border:0;border-radius:24px 0 0 0;background:var(--branco);color:var(--tinta);font:400 16.5px/1.5 var(--letra);resize:none;overflow:hidden;field-sizing:content;transition:background-color 120ms ease}
 .balao:not([readonly]){box-shadow:inset 0 -3px 0 var(--dourado);cursor:text}
@@ -227,13 +227,10 @@ h1,h2,h3{font-family:var(--titulo);font-weight:700;line-height:1.1;letter-spacin
 .balao__fim[hidden]{display:none}
 .conversa__acoes{display:grid;gap:10px;margin-top:16px;max-width:34em}
 .conversa__acoes .botao--contorno{min-height:48px}
-.fotos-instrucao{margin-top:16px;max-width:34em;font-size:16px;line-height:1.5;color:var(--branco)}
-.nao-guarda{margin-top:8px;font-size:15px;color:var(--grafite-claro)}
 .passos-titulo{margin-top:40px;font-size:1.375rem;color:var(--branco)}
-.passos{margin-top:8px;max-width:34em}
-.passos li{padding:12px 0;border-top:1px solid rgba(255,255,255,.24);font-size:16px;line-height:1.45;color:var(--grafite-claro)}
-.passos strong{display:block;font:600 17px/1.3 var(--titulo);color:var(--branco)}
-.nota-prazo{margin-top:6px;font-size:14px;color:var(--grafite-claro)}
+.passos{margin-top:12px;max-width:34em;counter-reset:passo}
+.passos li{display:flex;align-items:center;gap:14px;padding:12px 0;border-top:1px solid rgba(255,255,255,.24);font:500 17px/1.35 var(--letra);color:var(--branco);counter-increment:passo}
+.passos li::before{content:counter(passo);flex:none;display:grid;place-items:center;width:30px;height:30px;border-radius:10px 0 0 0;background:var(--dourado);color:var(--tinta);font:600 16px/1 var(--letra);font-variant-numeric:tabular-nums}
 
 /* ---------- rodapé: o cartão a fechar ---------- */
 .rodape{position:relative;isolation:isolate;font-size:15px;line-height:1.55}
@@ -305,8 +302,9 @@ h1,h2,h3{font-family:var(--titulo);font-weight:700;line-height:1.1;letter-spacin
   .grupo + .grupo{margin-top:clamp(56px,6vw,88px)}
   .grupo--fora .grupo__foto img{aspect-ratio:4/3}
   .grupo--dentro .grupo__foto img{aspect-ratio:4/3}
-  .oficios{grid-template-columns:1fr 1fr;gap:10px 40px;margin-top:20px}
-  .oficio span{font-size:16.5px}
+  .oficios{grid-template-columns:1fr 1fr;gap:14px 40px;margin-top:28px}
+  .oficio strong{font-size:1.25rem}
+  .oficio span{font-size:16px}
 
   /* máquinas */
   .maquinas.sec{padding-block:clamp(72px,8vw,112px)}
@@ -322,8 +320,7 @@ h1,h2,h3{font-family:var(--titulo);font-weight:700;line-height:1.1;letter-spacin
   .maquinas__foto img{aspect-ratio:4/5;object-position:50% 30%}
 
   /* obras */
-  .obras__cab{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:24px 64px;align-items:end}
-  .obras__cab .intro{margin-top:0}
+  .obras__cab .intro{margin-top:18px}
   .galeria{grid-template-columns:repeat(4,minmax(0,1fr));grid-auto-rows:270px;gap:34px 20px;margin-top:44px;align-items:stretch}
   .galeria figure{display:flex;flex-direction:column;min-height:0}
   .galeria img,.galeria .g-largo img{flex:1;min-height:0;height:100%;aspect-ratio:auto;border-radius:var(--canto-g) 0 0 0}
@@ -546,7 +543,7 @@ html.visor-aberto{overflow:hidden;overscroll-behavior:none}
 
   <div class="hero__texto">
     <h1>Construção e remodelação no Cartaxo.</h1>
-    <p class="hero__sub">Do terreno à última pintura.<span class="so-computador"> Começamos com a mini giratória, levantamos paredes, isolamos, tratamos da luz e da água e deixamos tudo pintado.</span> Um só contacto para a obra toda.</p>
+    <p class="hero__sub">Um só contacto para a obra toda.</p>
     <div class="acoes" data-esconde-barra>
       <a class="botao botao--dourado" data-wa href="https://wa.me/351933180922?text=Ol%C3%A1%2C%20vi%20o%20site%20da%20AH%20e%20queria%20pedir%20um%20or%C3%A7amento.">Falar no WhatsApp</a>
       <a class="botao botao--grafite" href="tel:+351933180922">Ligar <span class="num">933 180 922</span></a>
@@ -583,14 +580,14 @@ html.visor-aberto{overflow:hidden;overscroll-behavior:none}
     </div>
     <div>
       <h2 id="t-servicos">Pela ordem em que uma casa se faz.</h2>
-      <p class="intro">Pode pedir a obra inteira ou só a parte que falta. Carregue na obra que procura e o pedido abre já com ela escolhida.</p>
+      <p class="intro">Carregue numa obra para pedir orçamento.</p>
     </div>
   </div>
 
   <div class="painel-servicos no-grafite">
     <div class="wrap grupo grupo--fora">
       <div class="grupo__texto">
-        <h3>Por fora <span>Do terreno ao telhado.</span></h3>
+        <h3>Por fora</h3>
         <ul class="oficios">
           <li><a class="oficio" href="#pedido" data-obra="Terreno e máquina"><strong>Terreno e máquina</strong><span>Abrir valas e fundações, demolir, nivelar e limpar terreno.</span></a></li>
           <li><a class="oficio" href="#pedido" data-obra="Construção ou ampliação"><strong>Casa nova, anexo ou ampliação</strong><span>Paredes em alvenaria ou em estrutura de aço leve.</span></a></li>
@@ -610,7 +607,7 @@ html.visor-aberto{overflow:hidden;overscroll-behavior:none}
         <figcaption>Em obra: pavimento flutuante já assente na sala.</figcaption>
       </figure>
       <div class="grupo__texto">
-        <h3>Por dentro <span>Da luz à última pintura.</span></h3>
+        <h3>Por dentro</h3>
         <ul class="oficios">
           <li><a class="oficio" href="#pedido" data-obra="Eletricidade e domótica"><strong>Eletricidade e domótica</strong><span>Instalação nova ou remodelada: quadro, tomadas e iluminação.</span></a></li>
           <li><a class="oficio" href="#pedido" data-obra="Canalização"><strong>Canalização</strong><span>Água e esgotos: canos novos e reparação de fugas.</span></a></li>
@@ -628,7 +625,7 @@ html.visor-aberto{overflow:hidden;overscroll-behavior:none}
   <div class="wrap maquinas__grelha">
     <div class="maquinas__texto">
       <h2 id="t-maquinas">A parte pesada também é connosco.</h2>
-      <p class="intro">Muitas obras começam antes das paredes: é preciso abrir valas, escavar e tirar terra. Fazemos essa parte com a mini giratória e a carrinha basculante, as duas máquinas do logótipo.</p>
+      <p class="intro">Abrimos valas, escavamos e levamos o entulho, com máquinas próprias.</p>
     </div>
     <figure class="maquinas__foto">
       <a class="foto-link" href="assets/fotos/obra-11-1200.jpg" data-avif="assets/fotos/obra-11-1200.avif" data-w="800" data-h="1066" data-visor="maquinas"><picture><source media="(max-width:899px)" type="image/avif" srcset="assets/fotos/obra-11-tel.avif" width="800" height="400"><source media="(max-width:899px)" srcset="assets/fotos/obra-11-tel.jpg" width="800" height="400"><source type="image/avif" srcset="assets/fotos/obra-11-640.avif 640w, assets/fotos/obra-11-1200.avif 800w" sizes="(min-width:900px) 38vw, 100vw"><img src="assets/fotos/obra-11-1200.jpg" srcset="assets/fotos/obra-11-640.jpg 640w, assets/fotos/obra-11-1200.jpg 800w" sizes="(min-width:900px) 38vw, 100vw" width="800" height="1066" loading="lazy" decoding="async" alt="Mini giratória amarela e carrinha basculante junto a um monte de brita, num terreno com árvores"></picture><span class="so-leitor">, abrir em grande</span></a>
@@ -665,7 +662,7 @@ html.visor-aberto{overflow:hidden;overscroll-behavior:none}
   <div class="wrap">
     <div class="obras__cab">
       <h2 id="t-obras">Obras da equipa.</h2>
-      <p class="intro">Fotografias das nossas obras, umas já acabadas e outras a meio. Carregue numa foto para a ver em grande. <a href="https://www.zaask.pt/user/abdelhassam" target="_blank" rel="noopener">Ver as avaliações no Zaask</a></p>
+      <p class="intro">Carregue numa foto para a ver em grande.</p>
     </div>
     <div class="galeria">
       <figure class="g-largo"><a class="foto-link" href="assets/fotos/obra-03-1200.jpg" data-avif="assets/fotos/obra-03-1200.avif" data-w="800" data-h="450" data-visor="obras"><picture><source type="image/avif" srcset="assets/fotos/obra-03-640.avif 640w, assets/fotos/obra-03-1200.avif 800w" sizes="(min-width:900px) 45vw, 50vw"><img src="assets/fotos/obra-03-1200.jpg" srcset="assets/fotos/obra-03-640.jpg 640w, assets/fotos/obra-03-1200.jpg 800w" sizes="(min-width:900px) 45vw, 50vw" width="800" height="450" loading="lazy" decoding="async" alt="Cozinha com ilha central, móveis cinzentos, focos embutidos no teto e luz por baixo dos armários"></picture><span class="so-leitor">, abrir em grande</span></a><figcaption><span class="fase">Acabada</span>Cozinha com ilha, focos no teto e luz por baixo dos armários.</figcaption></figure>
@@ -695,7 +692,7 @@ html.visor-aberto{overflow:hidden;overscroll-behavior:none}
   <svg class="papel" viewBox="0 0 1600 1000" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path d="M0,0 L920.6,0 C978.2,159.4 985,331.1 983.3,500 C983.6,667.4 949.2,832.1 946.5,1000 L0,1000 Z"/></svg>
   <div class="pedido__form">
     <h2 id="t-pedido">Peça o orçamento pelo WhatsApp.</h2>
-    <p class="intro">Escolha a obra, diga onde é e, se quiser, escreva duas linhas. A mensagem fica pronta e só sai quando a enviar.</p>
+    <p class="intro">Escolha a obra e a mensagem fica pronta.</p>
     <form id="form-pedido" class="campos" action="#pedido" novalidate>
       <div role="group" aria-labelledby="l-obra" id="grupo-obra">
         <span class="rotulo" id="l-obra">Que obra é?</span>
@@ -713,7 +710,7 @@ html.visor-aberto{overflow:hidden;overscroll-behavior:none}
           <button type="button" class="chip" aria-pressed="false" data-obra="Outra">Outra</button>
         </div>
       </div>
-      <p class="campos__aviso" id="campos-editada" hidden>Mudou a mensagem à mão, por isso estas escolhas já não entram nela. Por baixo da mensagem há um botão para voltar à automática.</p>
+      <p class="campos__aviso" id="campos-editada" hidden>Mudou a mensagem à mão, por isso estas escolhas já não entram nela.</p>
       <div class="campo">
         <label class="rotulo" for="c-local">Localidade</label>
         <input id="c-local" name="localidade" autocomplete="address-level2" autocapitalize="words" autocorrect="off" spellcheck="false" enterkeyhint="next" placeholder="Ex.: Cartaxo" maxlength="60">
@@ -732,7 +729,7 @@ html.visor-aberto{overflow:hidden;overscroll-behavior:none}
   <div class="pedido__conversa no-grafite">
     <svg class="deitada" viewBox="0 0 1000 66" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path fill="#FFFFFF" d="M0,0 H1000 V25.9 C832.1,28.6 667.4,63 500,62.7 C331.1,64.4 159.4,57.6 0,0 Z"/></svg>
     <div class="dentro">
-      <label class="conversa__para" id="l-msg" for="msg">A mensagem que vai para o 933 180 922<span class="conversa__dica" id="msg-dica" hidden>Pode mudar o texto aqui antes de enviar.</span></label>
+      <label class="conversa__para" id="l-msg" for="msg">Mensagem<span class="conversa__dica" id="msg-dica" hidden> (pode alterar)</span></label>
       <textarea class="balao" id="msg" rows="4" maxlength="1000" readonly autocapitalize="sentences">Olá, vi o site da AH e queria pedir um orçamento.
 Vou mandar 2 fotos: uma de longe e outra de perto.</textarea>
       <div role="status">
@@ -740,21 +737,15 @@ Vou mandar 2 fotos: uma de longe e outra de perto.</textarea>
         <p id="msg-editada" class="balao__fim" hidden><span id="msg-editada-txt">Mudou a mensagem à mão. O que escolher ou escrever no formulário já não entra nela.</span> <button type="button" class="balao__repor" id="msg-repor">Voltar à mensagem automática</button></p>
       </div>
       <div class="conversa__acoes" data-esconde-barra>
-        <a class="botao botao--dourado" id="wa-pedido" data-wa-pedido href="https://wa.me/351933180922?text=Ol%C3%A1%2C%20vi%20o%20site%20da%20AH%20e%20queria%20pedir%20um%20or%C3%A7amento.%0AVou%20mandar%202%20fotos%3A%20uma%20de%20longe%20e%20outra%20de%20perto.">Abrir no WhatsApp com esta mensagem</a>
+        <a class="botao botao--dourado" id="wa-pedido" data-wa-pedido href="https://wa.me/351933180922?text=Ol%C3%A1%2C%20vi%20o%20site%20da%20AH%20e%20queria%20pedir%20um%20or%C3%A7amento.%0AVou%20mandar%202%20fotos%3A%20uma%20de%20longe%20e%20outra%20de%20perto.">Abrir no WhatsApp</a>
         <a class="botao botao--contorno" id="email-pedido" href="mailto:remodelacoes.ah@gmail.com?subject=Pedido%20de%20or%C3%A7amento&amp;body=Ol%C3%A1%2C%20vi%20o%20site%20da%20AH%20e%20queria%20pedir%20um%20or%C3%A7amento.">Prefiro email</a>
       </div>
-      <p class="fotos-instrucao">Depois, no WhatsApp, junte duas fotos: uma de longe, para se ver o sítio, e outra de perto, para se ver o problema.</p>
-      <p class="honesto">O preço a sério só depois de ver o sítio. As fotos ajudam-nos a preparar a visita, não a substituem.</p>
-      <p class="nao-guarda">Esta página não guarda nada.</p>
-
-      <h3 class="passos-titulo">O que acontece a seguir</h3>
+      <h3 class="passos-titulo">A seguir</h3>
       <ol class="passos">
-        <li><strong>Vemos as fotos e ligamos</strong>Para perceber a obra e marcar a visita.</li>
-        <li><strong>Na visita</strong>Vemos o sítio, medimos e tiramos dúvidas.</li>
-        <li><strong>Orçamento por escrito</strong>Recebe-o depois da visita.</li>
-        <li><strong>A obra só começa quando disser que sim</strong>Até lá, é só um orçamento.</li>
+        <li>Vemos as fotos e ligamos</li>
+        <li>Visita e medições no sítio</li>
+        <li>Orçamento por escrito, sem compromisso</li>
       </ol>
-      <p class="nota-prazo">Prazo de resposta: a confirmar.</p>
     </div>
   </div>
 </section>
